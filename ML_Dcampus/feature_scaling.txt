@@ -1,0 +1,23 @@
+Feature scaling:-
+it is a technique to standardize the independent features present 
+in the data in a fixed range
+
+Types:-
+1.Standardization / Z-score Normalization:-
+formula xi = xi-x/6(sigma )
+xi = val
+x = mean
+sigma(6) = std 
+now new col :- mean will be 0 and std will be 1 
+
+if Outlier in col and we apply Standardization outlier impact will not reduce 
+
+if KNN
+K-Means
+programically
+Artifical Neural Network
+Gardient Descent 
+APPLY STANDARDIZATION 
+2.Normalization
+minmaxscaler
+robustscaler 

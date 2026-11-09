@@ -1,0 +1,3088 @@
+-------------------------------------------------------------------------------------------------
+1) What is Python, and what are its benefits?
+
+Answer: Python is a high-level, interpreted programming language known for its readability and simplicity. 
+
+Benefits include:
+
+Easy to learn: Its syntax is straightforward and similar to English.
+
+Versatile: Suitable for web development, data analysis, machine learning, automation, and more.
+
+Large community: A vast ecosystem of libraries and frameworks.
+
+Cross-platform: Runs on various operating systems.
+
+-------------------------------------------------------------------------------------------------
+2) Explain the difference between lists and tuples in Python.
+Answer:
+
+Mutability: Lists are mutable (can be changed), while tuples are immutable (cannot be changed after creation).
+
+Syntax: Lists use square brackets [], whereas tuples use parentheses ().
+
+Performance: Tuples are generally faster than lists due to their immutability.
+
+-------------------------------------------------------------------------------------------------
+3) What is PEP 8, and why is it important?
+
+Answer: PEP 8 is the Python Enhancement Proposal that provides guidelines and best practices for writing Python code.
+
+It covers topics like naming conventions, code layout, and documentation. Adhering to PEP 8 improves code 
+
+readability and consistency, making it easier for developers to collaborate.
+-------------------------------------------------------------------------------------------------
+4) How does Python manage memory?
+
+Answer: Python uses a built-in garbage collector for memory management. 
+
+It employs reference counting and a cyclic garbage collector to reclaim memory.
+
+When an object’s reference count drops to zero, it is eligible for garbage collection. This helps to free up memory automatically without explicit deallocation by the programmer.
+-------------------------------------------------------------------------------------------------
+5) What are decorators in Python?
+
+Answer: Decorators are functions that modify the behavior of another function or method. 
+
+They are often used to add functionality like logging, access control, or caching. A decorator is applied using the @decorator_name syntax above the function definition.
+-------------------------------------------------------------------------------------------------
+6) Can you explain list comprehension and give an example?
+
+Answer: List comprehension is a concise way to create lists in Python. 
+It allows you to generate a new list by applying an expression to each item in an existing iterable.
+
+e.g.
+
+squares = [x**2 for x in range(10)]
+# Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+-------------------------------------------------------------------------------------------------
+7) What are the different types of operators in Python?
+Answer: Python supports several types of operators:
+
+Arithmetic Operators: +, -, *, /, // (floor division), % (modulus), ** (exponentiation).
+
+Comparison Operators: ==, !=, >, <, >=, <=.
+
+Logical Operators: and, or, not.
+
+Bitwise Operators: & (AND), | (OR), ^ (XOR), ~ (NOT), << (left shift), >> (right shift).
+
+Assignment Operators: =, +=, -=, *=, /=, etc.
+
+Identity Operators: is, is not.
+
+Membership Operators: in, not in.
+-------------------------------------------------------------------------------------------------
+8) What is the difference between == and is?
+
+== checks for value equality, meaning it evaluates whether the values of two objects are the same.
+
+is checks for identity equality, meaning it evaluates whether two references point to the same object in memory.
+
+Example:
+
+a = [1, 2, 3]
+b = a
+c = a[:]
+
+print(a == c)  # True, values are the same
+
+print(a is c)  # False, c is a different object
+
+print(a is b)  # True, b references the same object as a
+
+-------------------------------------------------------------------------------------------------
+9) How do you use the += operator, and what is its effect?
+Answer: The += operator is an example of an augmented assignment operator. 
+It adds the right operand to the left operand and assigns the result to the left operand.
+
+x = 5
+x += 3  # Equivalent to x = x + 3
+
+print(x)  # Output: 8
+-------------------------------------------------------------------------------------------------
+10) What are bitwise operators, and how do they work?
+
+Answer: Bitwise operators operate on the binary representations of integers. They include:
+
+& (AND): Bitwise AND
+| (OR): Bitwise OR
+^ (XOR): Bitwise XOR
+~ (NOT): Bitwise NOT
+<< (left shift): Shifts bits to the left, filling with zeros.
+>> (right shift): Shifts bits to the right.
+
+Example:
+
+a = 5  # Binary: 0101
+b = 3  # Binary: 0011
+
+print(a & b)  # Output: 1 (Binary: 0001)
+print(a | b)  # Output: 7 (Binary: 0111)
+print(a ^ b)  # Output: 6 (Binary: 0110)
+print(~a)     # Output: -6 (Binary: ...11111010)
+-------------------------------------------------------------------------------------------------
+11) Explain how the floor division operator // works.
+
+Answer: The floor division operator // divides two numbers and returns the largest integer less than or equal to the result.
+
+Example:
+
+print(7 // 2)   # Output: 3
+print(-7 // 2)  # Output: -4
+-------------------------------------------------------------------------------------------------
+12) What is the difference between the and and or logical operators?
+
+Answer:
+
+and: Returns True if both operands are true. If any operand is false, it returns false.
+or: Returns True if at least one operand is true. If both operands are false, it returns false.
+
+Example:
+
+a = True
+b = False
+
+print(a and b)  # Output: False
+print(a or b)   # Output: True
+
+-------------------------------------------------------------------------------------------------
+13) Can you provide an example of using the in operator?
+Answer: The in operator checks for membership, determining if a value exists within an iterable (like a list, tuple, or string).
+
+Example:
+
+my_list = [1, 2, 3, 4, 5]
+print(3 in my_list)  # Output: True
+print(6 in my_list)  # Output: False
+
+my_string = "hello"
+print('h' in my_string)  # Output: True
+-------------------------------------------------------------------------------------------------
+14) What are the comparison operators, and how do they differ?
+
+Answer: Comparison operators are used to compare two values. They include:
+
+==: Equal to
+!=: Not equal to
+>: Greater than
+<: Less than
+>=: Greater than or equal to
+<=: Less than or equal to
+
+They return a boolean value (True or False) based on the comparison.
+-------------------------------------------------------------------------------------------------
+15) How does the modulus operator % work in Python?
+
+Answer: The modulus operator % returns the remainder of the division of two numbers.
+
+Example:
+
+print(10 % 3)  # Output: 1
+
+print(10 % 2)  # Output: 0
+-------------------------------------------------------------------------------------------------
+16) What will be the output of the following code?
+
+x = 10
+y = 20
+
+print(x < y and y > 15)
+
+Answer: The output will be True because both conditions are true: x < y is True and y > 15 is also True.
+-------------------------------------------------------------------------------------------------
+11) What is the purpose of the not operator in Python?
+
+Answer: The not operator is a logical operator that negates a boolean value. 
+If the value is True, it returns False, and vice versa.
+
+Example:
+x = True
+print(not x)  # Output: False
+
+y = False
+print(not y)  # Output: True
+
+-------------------------------------------------------------------------------------------------
+12) Explain how the ** operator works in Python.
+Answer: The ** operator is the exponentiation operator. It raises the left operand to the power of the right operand.
+
+Example:
+
+print(2 ** 3)  # Output: 8 (2 raised to the power of 3)
+print(3 ** 2)  # Output: 9 (3 squared)
+-------------------------------------------------------------------------------------------------
+13) What will be the output of the following code snippet?
+
+a = [1, 2, 3]
+
+b = a
+
+b[0] = 10
+
+print(a)
+
+Answer: The output will be [10, 2, 3]. This is because b is a reference to the same list as a, so modifying b affects a.
+-------------------------------------------------------------------------------------------------
+14) How do the << and >> operators work?
+
+Answer:
+
+The << operator is the left shift operator. It shifts the bits of the number to the left, filling the rightmost bits with zeros. 
+This effectively multiplies the number by 2 for each shift.
+
+The >> operator is the right shift operator. It shifts the bits to the right, discarding the rightmost bits. 
+This effectively divides the number by 2 for each shift (and rounds down for negative numbers).
+
+Example:
+
+print(2 << 1)  # Output: 4 (Binary: 10 shifted to 100)
+print(4 >> 1)  # Output: 2 (Binary: 100 shifted to 10)
+-------------------------------------------------------------------------------------------------
+15) What is the result of using the is not operator?
+
+Answer: The is not operator checks whether two references do not point to the same object in memory. 
+It returns True if they are different and False if they are the same.
+
+Example:
+
+python
+Copy code
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+print(a is not b)  # Output: False (same object)
+print(a is not c)  # Output: True (different objects)
+-------------------------------------------------------------------------------------------------
+16) Explain the usage of the += operator with mutable vs. immutable types.
+
+Answer: The += operator modifies the object in place for mutable types (like lists) but creates a new object for 
+        immutable types (like integers or strings).
+
+Example:
+
+# Mutable type (list)
+
+lst = [1, 2, 3]
+lst += [4, 5]
+
+print(lst)  # Output: [1, 2, 3, 4, 5]
+
+# Immutable type (integer)
+
+x = 10
+x += 5  # Creates a new integer object
+
+print(x)  # Output: 15
+-------------------------------------------------------------------------------------------------
+17) Can you provide an example of how the in operator can be used with dictionaries?
+
+Answer: The in operator can be used with dictionaries to check if a key exists in the dictionary.
+
+Example:
+
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+print('b' in my_dict)  # Output: True
+print(2 in my_dict)     # Output: False (checks keys, not values)
+-------------------------------------------------------------------------------------------------
+18). How does Python evaluate chained comparisons?
+Answer: Python allows chaining of comparison operators. 
+Each comparison is evaluated sequentially, and the entire expression is True only if all comparisons are True.
+
+Example:
+
+x = 5
+print(1 < x < 10)  # Output: True (equivalent to (1 < x) and (x < 10))
+
+print(10 < x < 20)  # Output: False
+
+-------------------------------------------------------------------------------------------------
+19) What happens when you use the modulus operator % with negative numbers?
+Answer: The result of the modulus operator with negative numbers can be counterintuitive. 
+The result will always have the same sign as the divisor.
+
+Example:
+
+print(-7 % 3)  # Output: 2 (because -7 = -3*3 + 2)
+
+print(7 % -3)  # Output: -2 (because 7 = -3*(-2) - 2)
+-------------------------------------------------------------------------------------------------
+20) Can you explain the short-circuiting behavior of the and and or operators?
+
+Answer:
+
+Short-circuiting: In Python, the and operator stops evaluating as soon as it encounters a False value. 
+If the first operand is False, the result is False, and the second operand is not evaluated.
+
+For the or operator, it stops evaluating as soon as it encounters a True value. 
+If the first operand is True, the result is True, and the second operand is not evaluated.
+
+Example:
+
+
+def func():
+    print("Function called")
+    return True
+
+# Short-circuiting example
+result = False and func()  # "Function called" is not printed
+print(result)  # Output: False
+
+result = True or func()  # "Function called" is not printed
+print(result)  # Output: True
+-------------------------------------------------------------------------------------------------
+21) What is a conditional statement in Python?
+
+Answer:
+
+A conditional statement in Python is a feature that allows the program to execute certain pieces of 
+code based on whether a specific condition is true or false. 
+The most common conditional statements in Python are if, elif, and else. For example:
+
+x = 10
+if x > 5:
+    print("x is greater than 5")
+elif x == 5:
+    print("x is equal to 5")
+else:
+    print("x is less than 5")
+-------------------------------------------------------------------------------------------------
+21) How does the if-elif-else structure work?
+Answer:
+
+The if-elif-else structure allows you to check multiple conditions in a sequence. The code evaluates each condition in order.
+If one of the conditions is true, the corresponding block of code is executed, and the rest of the conditions are skipped. 
+If none of the conditions are true, the code under else (if present) will be executed. Here's an example:
+
+age = 20
+if age < 13:
+    print("Child")
+elif age < 20:
+    print("Teenager")
+else:
+    print("Adult")
+
+-------------------------------------------------------------------------------------------------
+
+22): Can you explain how logical operators work in conditional statements?
+
+Answer:
+
+Logical operators such as and, or, and not are used to combine multiple conditions in Python.
+
+and returns True only if both conditions are true.
+
+or returns True if at least one of the conditions is true.
+
+not negates the condition.
+
+For example:
+
+x = 10
+y = 20
+
+if x > 5 and y > 15:
+    print("Both conditions are true")
+
+if x < 5 or y > 15:
+    print("At least one condition is true")
+
+if not(x > 5):
+    print("x is not greater than 5")
+
+-------------------------------------------------------------------------------------------------
+23): What is the difference between == and is in Python?
+Answer:
+
+In Python, == checks for value equality, meaning it checks whether the values of two variables are the same. 
+In contrast, is checks for identity, meaning it checks whether two variables refer to the same object in memory. 
+
+For example:
+
+a = [1, 2, 3]
+b = a
+c = a[:]
+
+print(a == b)  # True, values are the same
+print(a is b)  # True, both refer to the same object
+print(a == c)  # True, values are the same
+print(a is c)  # False, c is a different object
+
+-------------------------------------------------------------------------------------------------
+
+24) : How can you use nested conditional statements?
+
+Answer:
+Nested conditional statements are conditionals within conditionals. 
+This allows for more complex decision-making. Here's an example:
+
+num = 10
+if num >= 0:
+    print("Positive or Zero")
+    if num == 0:
+        print("Zero")
+    else:
+        print("Positive")
+else:
+    print("Negative")
+
+In this example, if num is non-negative, it checks further if it is zero or positive.
+
+-------------------------------------------------------------------------------------------------
+25) : Can you provide an example of using a conditional statement in a loop?
+Answer:
+Certainly! Conditional statements are often used within loops to control the flow based on certain criteria. 
+Here’s an example using a for loop:
+
+numbers = [1, 2, 3, 4, 5]
+
+for num in numbers:
+    if num % 2 == 0:
+        print(f"{num} is even")
+    else:
+        print(f"{num} is odd")
+
+This code iterates through a list of numbers and prints whether each number is even or odd.
+
+-------------------------------------------------------------------------------------------------
+26) : What happens if you forget the colon : at the end of a conditional statement?
+Answer:
+
+If you forget the colon : at the end of a conditional statement, 
+
+Python will raise a SyntaxError indicating that it expects a colon. 
+
+The colon is essential because it signifies the beginning of the block of code that should be executed if the condition is true. 
+
+For example:
+
+if True  # Missing colon here
+    print("Hello")
+
+This will produce an error:
+
+SyntaxError: expected ':'
+-------------------------------------------------------------------------------------------------
+27) : How can you use the ternary operator in Python?
+
+The ternary operator, also known as a conditional expression, allows you to evaluate a condition in a single line. The syntax is:
+
+value_if_true if condition else value_if_false
+
+e.g. 
+
+age = 18
+status = "Adult" if age >= 18 else "Minor"
+
+print(status)  # Output: Adult
+
+
+This allows for concise conditional assignments.
+-------------------------------------------------------------------------------------------------
+28) Can you explain the difference between if statements and try-except blocks?
+Answer:
+
+if statements are used for conditional logic based on boolean conditions, while try-except blocks are used for handling exceptions.
+
+if checks conditions and executes code based on the result.
+
+try-except is designed to catch and handle errors that occur during execution.
+
+Example of try-except:
+
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+
+In this case, the code inside the try block raises an exception, which is handled by the except block.
+-------------------------------------------------------------------------------------------------
+29) How do you handle multiple conditions without using if?
+
+Answer:
+You can use dictionaries to simulate a switch-case-like behavior, which can help avoid multiple if statements. For example:
+
+def switch_case(value):
+    return {
+        1: "One",
+        2: "Two",
+        3: "Three"
+    }.get(value, "Invalid")
+
+print(switch_case(2))  # Output: Two
+print(switch_case(5))  # Output: Invalid
+
+This method improves readability when dealing with multiple discrete values.
+-------------------------------------------------------------------------------------------------
+30) What is the role of the pass statement in conditional statements?
+
+Answer:
+The pass statement is a placeholder that does nothing when executed. 
+It is useful in conditional statements where you want to define a block of code syntactically but don’t want to implement any functionality yet.
+
+Example:
+
+x = 10
+if x > 5:
+    pass  # Future implementation goes here
+else:
+    print("x is 5 or less")
+-------------------------------------------------------------------------------------------------
+31) : How do you compare two strings in a conditional statement?
+
+Answer:
+You can use comparison operators like ==, !=, <, >, etc., to compare strings. 
+Strings in Python are compared lexicographically based on their ASCII values.
+
+Example:
+
+string1 = "apple"
+string2 = "banana"
+
+if string1 < string2:
+    print(f"{string1} comes before {string2}")
+else:
+    print(f"{string2} comes before {string1}")
+-------------------------------------------------------------------------------------------------
+32) What is a function in Python?
+
+Answer: A function in Python is a block of reusable code that performs a specific task. 
+It is defined using the def keyword followed by the function name and parentheses.
+Functions can take parameters and can return values.
+
+-------------------------------------------------------------------------------------------------
+33) How do you define a function in Python?
+
+Answer: A function is defined using the def keyword, 
+followed by the function name, parentheses, and a colon. 
+The code block inside the function is indented. For example:
+
+def greet(name):
+    return f"Hello, {name}!"
+-------------------------------------------------------------------------------------------------
+34) What are default arguments in Python functions?
+
+Answer: Default arguments allow you to specify a default value for a parameter in a function. 
+If no value is provided for that parameter when the function is called, the default value is used. For example:
+
+def greet(name="World"):
+    return f"Hello, {name}!"
+
+-------------------------------------------------------------------------------------------------
+35) What is a lambda function in Python?
+
+Answer: A lambda function is an anonymous function defined using the lambda keyword. 
+It can take any number of arguments but can only have one expression. 
+Lambda functions are often used for short, throwaway functions.
+
+For example:
+
+square = lambda x: x ** 2
+
+print(square(5))  # Output: 25
+-------------------------------------------------------------------------------------------------
+36) Explain the concept of variable-length arguments in Python functions.
+
+Answer: Variable-length arguments allow you to pass a variable number of arguments to a function. 
+This is done using the *args and **kwargs syntax.
+*args is used for non-keyword variable-length arguments, 
+while **kwargs is used for keyword variable-length arguments.
+
+def example(*args, **kwargs):
+    print(args)    # Non-keyword arguments
+    print(kwargs)  # Keyword arguments
+
+-------------------------------------------------------------------------------------------------
+37) What are *args and kwargs? Provide an example.
+
+Answer: *args allows you to pass a variable number of non-keyword arguments to a function, 
+while **kwargs allows you to pass a variable number of keyword arguments. 
+
+For example:
+
+def demo_function(*args, **kwargs):
+    print("Args:", args)
+    print("Kwargs:", kwargs)
+
+demo_function(1, 2, 3, name="Alice", age=30)
+
+Output:
+
+Args: (1, 2, 3)
+Kwargs: {'name': 'Alice', 'age': 30}
+
+-------------------------------------------------------------------------------------------------
+38) What is a higher-order function? Provide an example.
+
+Answer: A higher-order function is a function that takes another function as an argument or returns a function as a result. 
+An example is the map() function, which applies a function to all items in an iterable.
+
+def square(x):
+    return x ** 2
+
+squared_numbers = list(map(square, [1, 2, 3, 4]))
+
+print(squared_numbers)  # Output: [1, 4, 9, 16]
+-------------------------------------------------------------------------------------------------
+39) How do decorators work in Python?
+
+Answer: Decorators are functions that modify the behavior of another function.
+They are defined using the @decorator_name syntax above the function to be modified. 
+Here’s an example of a simple decorator:
+
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+-------------------------------------------------------------------------------------------------
+40) What are function annotations in Python?
+Answer: Function annotations provide a way to attach metadata to function parameters and return values. 
+They are optional and are defined using a colon after the parameter name. 
+
+For example:
+
+def add(a: int, b: int) -> int:
+    return a + b
+
+Here, a and b are annotated as integers, and the function is expected to return an integer.
+-------------------------------------------------------------------------------------------------
+41) Explain the concept of closures in Python.
+
+Answer: A closure occurs when a nested function remembers the values from its enclosing lexical 
+scope even after the outer function has finished executing. 
+This is useful for maintaining state without using global variables. For example:
+
+python
+Copy code
+def outer_function(msg):
+    def inner_function():
+        print(msg)
+    return inner_function
+
+closure = outer_function("Hello, Closure!")
+closure()  # Output: Hello, Closure!
+
+-------------------------------------------------------------------------------------------------
+42) What is the map function in Python, and how does it work?
+
+Answer: The map function applies a given function to all items in an iterable (like a list or a tuple) 
+and returns an iterator (in Python 3). The syntax is map(function, iterable). 
+For example, if you have a list of numbers and you want to double each number, you would use map to apply a function that doubles each value.
+-------------------------------------------------------------------------------------------------
+43) Can you provide an example of using the map function to square a list of numbers?
+
+Answer: Yes! Here’s a simple example:
+
+numbers = [1, 2, 3, 4, 5]
+
+squared = list(map(lambda x: x**2, numbers))
+
+print(squared)  # Output: [1, 4, 9, 16, 25]
+-------------------------------------------------------------------------------------------------
+44) How can you use a lambda function with map? Provide an example.
+
+Answer: You can use a lambda function to define the operation you want to perform. 
+For example:
+
+numbers = [1, 2, 3, 4]
+result = list(map(lambda x: x + 1, numbers))
+print(result)  # Output: [2, 3, 4, 5]
+-------------------------------------------------------------------------------------------------
+45) What does the map function return? How can you convert its output to a list?
+
+Answer: The map function returns a map object, which is an iterator. 
+To convert it to a list, you can use the list() constructor:
+
+result = list(map(lambda x: x * 2, [1, 2, 3]))
+print(result)  # Output: [2, 4, 6]
+-------------------------------------------------------------------------------------------------
+46) How does map handle multiple iterables? Give an example.
+
+Answer: When multiple iterables are passed to map, 
+it applies the function to the elements from the iterables in parallel. 
+If the iterables are of different lengths, it stops when the shortest iterable is exhausted:
+
+numbers = [1, 2, 3]
+multipliers = [10, 20, 30]
+
+result = list(map(lambda x, y: x * y, numbers, multipliers))
+
+print(result)  # Output: [10, 40, 90]
+-------------------------------------------------------------------------------------------------
+47) Discuss the performance differences between using map and a list comprehension for the same task.
+
+Answer: Generally, list comprehensions are more Pythonic and often more readable. 
+In terms of performance, map can be faster for simple functions 
+because it avoids the overhead of creating the list explicitly. However, for more complex operations, 
+list comprehensions may be clearer. 
+Here’s a comparison:
+
+# Using map
+result_map = list(map(lambda x: x + 1, range(1000)))
+
+# Using list comprehension
+result_comprehension = [x + 1 for x in range(1000)]
+-------------------------------------------------------------------------------------------------
+48) What happens if the function passed to map raises an exception? Can you provide an example?
+
+Answer: If the function raises an exception during execution, 
+the map function will terminate and raise that exception. 
+
+For example:
+
+def faulty_function(x):
+    return 1 / (x - 2)
+
+numbers = [1, 2, 3]
+
+try:
+    result = list(map(faulty_function, numbers))
+except ZeroDivisionError as e:
+    print("Error:", e)  # Output: Error: division by zero
+-------------------------------------------------------------------------------------------------
+49) What is the filter function in Python, and how does it work?
+
+Answer: The filter function constructs an iterator from elements of an iterable for which a function returns True.
+The syntax is filter(function, iterable).
+For example, you can filter out even numbers from a list.
+Can you give an example of using filter to remove even numbers from a list?
+
+Answer: Sure! Here’s how to filter out even numbers:
+
+numbers = [1, 2, 3, 4, 5]
+
+odd_numbers = list(filter(lambda x: x % 2 != 0, numbers))
+
+print(odd_numbers)  # Output: [1, 3, 5]
+-------------------------------------------------------------------------------------------------
+50) How can you use a lambda function with filter? Provide an example.
+
+Answer: Similar to map, you can use a lambda function to define the filtering condition. For example:
+
+numbers = [1, 2, 3, 4, 5]
+filtered_numbers = list(filter(lambda x: x > 2, numbers))
+print(filtered_numbers)  # Output: [3, 4, 5]
+-------------------------------------------------------------------------------------------------
+51) What does the filter function return? How can you convert its output to a list?
+
+Answer: The filter function returns a filter object, which is an iterator. 
+To convert it to a list, use the list() constructor:
+
+result = list(filter(lambda x: x % 2 != 0, [1, 2, 3, 4, 5]))
+print(result)  # Output: [1, 3, 5]
+-------------------------------------------------------------------------------------------------
+52) How can you use filter to apply multiple conditions? Provide an example.
+
+Answer: You can combine multiple conditions using logical operators in the filtering function. 
+For example:
+
+numbers = [1, 2, 3, 4, 5, 6]
+result = list(filter(lambda x: x % 2 == 0 and x > 2, numbers))
+print(result)  # Output: [4, 6]
+
+-------------------------------------------------------------------------------------------------
+53) Compare the performance of filter versus a list comprehension that achieves the same result.
+
+Answer: Both filter and list comprehensions achieve similar results, 
+but list comprehensions are generally preferred for their readability. 
+Performance may vary depending on the context, but often they are quite comparable. Here’s a comparison:
+
+# Using filter
+evens_filter = list(filter(lambda x: x % 2 == 0, range(1000)))
+
+# Using list comprehension
+evens_comprehension = [x for x in range(1000) if x % 2 == 0]
+-------------------------------------------------------------------------------------------------
+54) What happens if the function passed to filter raises an exception? Can you illustrate this with an example?
+
+Answer: If the filtering function raises an exception, filter will stop execution and raise that exception. 
+
+For example:
+
+def faulty_filter(x):
+    if x == 0:
+        raise ValueError("Zero is not allowed")
+    return x > 0
+
+numbers = [0, 1, 2, -1, -2]
+
+try:
+    result = list(filter(faulty_filter, numbers))
+except ValueError as e:
+    print("Error:", e)  # Output: Error: Zero is not allowed
+-------------------------------------------------------------------------------------------------
+55) Describe a real-world scenario where you would use both map and filter together. Provide a code example.
+Answer: A common scenario is processing a list of user ages to calculate their birth years and then filtering out those who were born after a certain year. Here’s an example:
+
+ages = [25, 30, 15, 40]
+current_year = 2023
+birth_years = list(map(lambda age: current_year - age, ages))
+filtered_years = list(filter(lambda year: year < 2000, birth_years))
+print(filtered_years)  # Output might be [1983, 1993, 2008]
+-------------------------------------------------------------------------------------------------
+56) Can you chain map and filter? Provide an example where this is useful.
+Answer: Yes, you can chain map and filter to first filter a collection and then transform the filtered results.
+For instance:
+
+numbers = [1, 2, 3, 4, 5, 6]
+
+result = list(map(lambda x: x * 2, filter(lambda x: x % 2 == 0, numbers)))
+
+print(result)  # Output: [4, 8, 12]
+-------------------------------------------------------------------------------------------------
+57) Discuss the scope of the functions used with map and filter. How do they behave with respect to closures?
+
+Answer: The functions used with map and filter can be defined in the global scope or be inner functions (closures).
+If they use variables from the outer function, those variables must be in scope. For example:
+
+python
+Copy code
+
+def make_multiplier(n):
+    return lambda x: x * n
+
+double = make_multiplier(2)
+numbers = [1, 2, 3]
+-------------------------------------------------------------------------------------------------
+58) What are the advantages of using map over a traditional for loop?
+
+Answer: The map function can lead to more concise and potentially more readable code 
+compared to a traditional for loop. It also allows for functional programming styles, which can be beneficial in certain contexts. Additionally, 
+map may be slightly faster than a for loop when processing large datasets due to optimized internal implementations.
+
+-------------------------------------------------------------------------------------------------
+59) Can you explain how map works with custom functions? Provide an example.
+
+Answer: You can define a custom function and pass it to map. For instance:
+
+def add_five(x):
+    return x + 5
+
+numbers = [1, 2, 3, 4]
+
+result = list(map(add_five, numbers))
+
+print(result)  # Output: [6, 7, 8, 9]
+-------------------------------------------------------------------------------------------------
+60) What happens if the map function is applied to an empty iterable?
+
+Answer: If map is applied to an empty iterable, it will return an empty iterator. For example:
+
+result = list(map(lambda x: x + 1, []))
+print(result)  # Output: []
+-------------------------------------------------------------------------------------------------
+61) How would you use map to convert a list of strings to their lengths?
+
+Answer: You can pass the built-in len function to map to achieve this:
+
+strings = ["apple", "banana", "cherry"]
+
+lengths = list(map(len, strings))
+
+print(lengths)  # Output: [5, 6, 6]
+-------------------------------------------------------------------------------------------------
+62) Can you demonstrate the use of map with a list of tuples?
+Answer: Yes! You can use map to process tuples. For example, calculating the sum of pairs in a list of tuples:
+
+pairs = [(1, 2), (3, 4), (5, 6)]
+sums = list(map(lambda x: x[0] + x[1], pairs))
+print(sums)  # Output: [3, 7, 11]
+
+-------------------------------------------------------------------------------------------------
+63) More Filter Function Questions and Answers
+
+How would you use filter to keep only non-empty strings from a list?
+
+Answer: You can filter out non-empty strings by passing a function that checks for truthiness:
+python
+Copy code
+strings = ["", "apple", "", "banana"]
+non_empty = list(filter(lambda x: x, strings))
+print(non_empty)  # Output: ['apple', 'banana']
+-------------------------------------------------------------------------------------------------
+64) Can you use filter without defining a function? Provide an example.
+
+Answer: Yes, you can use filter with built-in functions like str.isdigit to filter digits from a list:
+
+items = ["123", "abc", "456", "def"]
+digits = list(filter(str.isdigit, items))
+print(digits)  # Output: ['123', '456']
+-------------------------------------------------------------------------------------------------
+65) What happens if filter is applied to an empty iterable?
+
+Answer: Similar to map, if filter is applied to an empty iterable, it will return an empty iterator:
+
+result = list(filter(lambda x: x > 0, []))
+
+print(result)  # Output: []
+-------------------------------------------------------------------------------------------------
+66) How can you use filter with a class method? Provide an example.
+
+Answer: You can filter objects based on attributes using a class method. For example:
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+people = [Person("Alice", 30), Person("Bob", 20), Person("Charlie", 25)]
+adults = list(filter(lambda person: person.age >= 21, people))
+print([p.name for p in adults])  # Output: ['Alice', 'Charlie'
+-------------------------------------------------------------------------------------------------]
+67) Can you combine map and filter to achieve a single task? Provide an example.
+
+Answer: Yes, you can chain map and filter to filter and then transform data. For example:
+
+numbers = [1, 2, 3, 4, 5, 6]
+result = list(map(lambda x: x * 2, filter(lambda x: x % 2 == 0, numbers)))
+print(result)  # Output: [4, 8, 12]
+-------------------------------------------------------------------------------------------------
+68) What are the differences between map, filter, and list comprehensions?
+
+Answer: The key differences are in syntax and use cases. 
+map applies a function to all items, while filter retains items that satisfy a condition.
+List comprehensions can achieve both functionalities and are generally more readable. For instance:
+
+# Using map
+doubled = list(map(lambda x: x * 2, [1, 2, 3]))
+
+# Using filter
+evens = list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4]))
+
+# Using list comprehension for both
+doubles_and_evens = [x * 2 for x in [1, 2, 3] if x % 2 == 0]
+-------------------------------------------------------------------------------------------------
+69) How can you implement error handling while using map and filter?
+
+Answer: You can wrap the function in a try-except block to handle errors gracefully. For example:
+
+def safe_divide(x):
+    try:
+        return 10 / x
+    except ZeroDivisionError:
+        return None
+
+numbers = [2, 0, 5, 10]
+results = list(map(safe_divide, numbers))
+
+print(results)  # Output: [5.0, None, 2.0, 1.0]
+-------------------------------------------------------------------------------------------------
+70) How do map and filter behave with different data types in Python?
+
+Answer: Both map and filter work with any callable and can operate on different data types.
+However, the callable should be designed to handle the types present in the iterable. 
+For example, you can filter numbers or strings based on their types:
+ 
+mixed = [1, 'two', 3, 'four']
+numbers = list(filter(lambda x: isinstance(x, int), mixed))
+print(numbers)  # Output: [1, 3]
+
+-------------------------------------------------------------------------------------------------
+71) What is a list in Python?
+
+Answer: A list is a mutable, ordered collection of elements that can hold a variety of data types. 
+Lists are defined using square brackets, e.g., my_list = [1, 2, 3].
+
+-------------------------------------------------------------------------------------------------
+72) How do you create a list in Python?
+Answer: You can create a list by placing comma-separated values inside square brackets.
+For example: my_list = ['apple', 'banana', 'cherry'].
+
+-------------------------------------------------------------------------------------------------
+73) How do you access elements in a list?
+Answer: You access list elements using their index, 
+with the first element at index 0. 
+For example: my_list[0] returns the first element.
+-------------------------------------------------------------------------------------------------
+74) How do you modify an element in a list?
+Answer: You can modify an element by assigning a new value to its index. 
+For example: my_list[1] = 'orange'.
+
+-------------------------------------------------------------------------------------------------
+75) What method would you use to add an element to the end of a list?
+
+Answer: Use the append() method. For example: my_list.append('grape').
+
+-------------------------------------------------------------------------------------------------
+76) How do you remove an element from a list?
+
+Answer: You can remove an element using the remove() method or pop() method. 
+remove(value) removes the first occurrence of the value, 
+while pop(index) removes and returns the element at the specified index.
+
+-------------------------------------------------------------------------------------------------
+77) What does the len() function do when applied to a list?
+
+Answer: The len() function returns the number of elements in the list. 
+For example: len(my_list).
+-------------------------------------------------------------------------------------------------
+78) How can you check if an item exists in a list?
+
+Answer: You can use the in keyword. 
+For example: 'apple' in my_list returns True if 'apple' is in my_list.
+-------------------------------------------------------------------------------------------------
+79) What are list comprehensions?
+
+Answer: List comprehensions provide a concise way to create lists. 
+The syntax is [expression for item in iterable]. For example: [x**2 for x in range(10)] creates a list of squares.
+-------------------------------------------------------------------------------------------------
+
+80) How do you concatenate two lists?
+
+Answer: You can concatenate lists using the + operator. For example: list1 + list2.
+
+-------------------------------------------------------------------------------------------------
+81) How do you slice a list?
+
+Answer: You can slice a list using the syntax list[start:end].
+This returns a sublist from the start index up to, but not including, the end index.
+-------------------------------------------------------------------------------------------------
+82) What is the difference between remove() and pop()?
+
+Answer: remove(value) removes the first occurrence of the specified value, 
+while pop(index) removes and returns the item at the specified index. If no index is provided, pop() removes the last item.
+-------------------------------------------------------------------------------------------------
+83) How can you sort a list?
+
+Answer: You can sort a list in-place using the sort() method or return a new sorted list using the sorted() function. For example: my_list.sort() or sorted(my_list).
+-------------------------------------------------------------------------------------------------
+84) How do you reverse a list?
+
+Answer: You can reverse a list using the reverse() method or the slicing technique my_list[::-1].
+The reverse() method modifies the list in place.
+-------------------------------------------------------------------------------------------------
+85) What does the index() method do?
+
+Answer: The index(value) method returns the index of the first occurrence of the specified value in the list.
+-------------------------------------------------------------------------------------------------
+86) How do you count occurrences of an item in a list?
+
+Answer: You can count occurrences using the count(value) method. For example: my_list.count('apple').
+-------------------------------------------------------------------------------------------------
+87) How can you create a copy of a list?
+
+Answer: You can create a copy using the slicing technique new_list = old_list[:] or the copy() method: new_list = old_list.copy().
+-------------------------------------------------------------------------------------------------
+88) What is the difference between shallow copy and deep copy?
+
+Answer: A shallow copy creates a new list containing references to the same objects as the original list, while a deep copy creates a new list with copies of the objects themselves. Use the copy module's deepcopy() function for deep copying.
+-------------------------------------------------------------------------------------------------
+89) How can you find the maximum and minimum values in a list?
+
+Answer: Use the built-in max() and min() functions. 
+For example: max(my_list) and min(my_list).
+-------------------------------------------------------------------------------------------------
+90) How do you extend a list with another list?
+
+Answer: Use the extend() method. For example: my_list.extend(other_list) adds all elements of other_list to my_list.
+-------------------------------------------------------------------------------------------------
+91) What are nested lists?
+
+Answer: Nested lists are lists that contain other lists as elements. For example: nested_list = [[1, 2], [3, 4]].
+-------------------------------------------------------------------------------------------------
+92) How can you flatten a nested list?
+
+Answer: You can flatten a nested list using list comprehensions or libraries like itertools.
+For example: [item for sublist in nested_list for item in sublist].
+-------------------------------------------------------------------------------------------------
+93) What is list comprehension, and how is it different from a regular loop?
+
+Answer: List comprehension is a concise way to create lists.
+It is generally more readable and often faster than a for loop. For example: [x**2 for x in range(10)] vs. a loop.
+-------------------------------------------------------------------------------------------------
+94) How can you use the filter() function with lists?
+
+Answer: The filter() function constructs an iterator from elements of a list for which a function returns True. For example: list(filter(lambda x: x > 5, my_list)).
+-------------------------------------------------------------------------------------------------
+95) What is the map() function, and how can you use it with lists?
+
+Answer: The map() function applies a specified function to each item in the list.
+For example: list(map(str, my_list)) converts all items to strings.
+-------------------------------------------------------------------------------------------------
+96) How can you remove duplicates from a list?
+
+Answer: You can remove duplicates by converting the list to a set and then back to a list: list(set(my_list)).
+-------------------------------------------------------------------------------------------------
+
+97) What are some common list performance considerations?
+
+Answer: Appending to the end of a list is O(1), 
+but inserting or deleting elements elsewhere can be O(n). Lists can be memory inefficient for large data sets, and using arrays or NumPy may be preferable.
+-------------------------------------------------------------------------------------------------
+98) How do you find the intersection of two lists?
+
+Answer: You can find the intersection using set operations: list(set(list1) & set(list2)).
+-------------------------------------------------------------------------------------------------
+99) What is the zip() function, and how is it used with lists?
+
+Answer: The zip() function combines elements from multiple iterables (like lists) into tuples.
+For example: list(zip(list1, list2)) creates a list of tuples.
+-------------------------------------------------------------------------------------------------
+100) How can you sort a list of tuples by the second element?
+
+Answer: You can sort using a lambda function as the key: sorted(list_of_tuples, key=lambda x: x[1]).
+-------------------------------------------------------------------------------------------------
+101) What is a list slice, and how does it differ from a regular list?
+Answer: A list slice is a subset of a list created using the slicing syntax. 
+It produces a new list, while the original list remains unchanged. For example, my_list[1:4] gives you a slice of elements from index 1 to 3.
+-------------------------------------------------------------------------------------------------
+102) How do you create a list with repeated elements?
+Answer: You can create a list with repeated elements by multiplying a list.
+For example: my_list = [0] * 5 creates [0, 0, 0, 0, 0].
+-------------------------------------------------------------------------------------------------
+103) What is the purpose of the sort() method’s reverse parameter?
+Answer: The reverse parameter in the sort() method allows you to sort the list in descending order when set to True.
+For example: my_list.sort(reverse=True).
+-------------------------------------------------------------------------------------------------
+104) Can you use lists as keys in a dictionary? Why or why not?
+Answer: No, lists cannot be used as keys in a dictionary because they are mutable and not hashable. 
+Only immutable types, like tuples or strings, can be used as dictionary keys.
+-------------------------------------------------------------------------------------------------
+105) How do you find the index of the last occurrence of an element in a list?
+
+Answer: You can find the index of the last occurrence by using the rindex() method or by reversing the list and using the index() method. 
+For example: my_list[::-1].index(value) gives the index from the end.
+-------------------------------------------------------------------------------------------------
+106) What is the difference between + and extend() when combining lists?
+Answer: The + operator returns a new list that is the concatenation of the two lists, 
+while extend() modifies the original list by appending elements from the second list to it.
+-------------------------------------------------------------------------------------------------
+107) How do you check if two lists are equal?
+Answer: You can check if two lists are equal using the equality operator ==. This checks if they have the same elements in the same order.
+-------------------------------------------------------------------------------------------------
+108) What is the difference between a list and a tuple?
+Answer: The primary difference is that lists are mutable (they can be changed), 
+while tuples are immutable (they cannot be changed once created). Lists use square brackets [], whereas tuples use parentheses ().
+-------------------------------------------------------------------------------------------------
+109) How can you use the enumerate() function with a list?
+Answer: The enumerate() function adds a counter to an iterable and returns it as an enumerate object. 
+This can be useful for getting both the index and value. For example: for index, value in enumerate(my_list).
+-------------------------------------------------------------------------------------------------
+110) How can you create a list of unique elements from another list?
+Answer: You can create a list of unique elements by converting the 
+list to a set and back to a list: unique_list = list(set(my_list)).
+-------------------------------------------------------------------------------------------------
+111) How do you merge multiple lists into one?
+Answer: You can merge multiple lists using the + operator or the extend() method. 
+You can also use list comprehensions or itertools.chain() for more complex merging.
+-------------------------------------------------------------------------------------------------
+112) What does the list() constructor do?
+Answer: The list() constructor creates a new list from an iterable.
+For example: my_list = list('hello') converts the string into a list of characters: ['h', 'e', 'l', 'l', 'o'].
+-------------------------------------------------------------------------------------------------
+113) How can you find the longest string in a list of strings?
+Answer: You can find the longest string using the max() function with the key parameter set to len: longest_string = max(my_list, key=len).
+-------------------------------------------------------------------------------------------------
+114) What is the clear() method used for in lists?
+Answer: The clear() method removes all items from the list, leaving it empty. 
+For example: my_list.clear() results in my_list being [].
+-------------------------------------------------------------------------------------------------
+115) How do you rotate a list?
+Answer: You can rotate a list by slicing. 
+For example, to rotate left by 1: my_list = my_list[1:] + my_list[:1].
+-------------------------------------------------------------------------------------------------
+116) How can you convert a list of strings to a single string?
+Answer: You can use the join() method. For example: result = ', '.join(my_list) 
+concatenates list elements into a single string with a comma and space as the separator.
+-------------------------------------------------------------------------------------------------
+117) What does the copy() method do?
+Answer: The copy() method creates a shallow copy of the list. 
+This means it creates a new list with references to the same objects in the original list.
+-------------------------------------------------------------------------------------------------
+118) How can you check if a list is empty?
+Answer: You can check if a list is empty by evaluating it in a boolean context.
+For example: if not my_list: will be True if my_list is empty.
+-------------------------------------------------------------------------------------------------
+119) What is the result of list(range(5))?
+Answer: The result is a list of integers from 0 to 4: [0, 1, 2, 3, 4].
+-------------------------------------------------------------------------------------------------
+120) How can you use the all() and any() functions with lists?
+Answer: The all() function returns True if all elements in the list are truthy, 
+while any() returns True if at least one element is truthy. For example: all(my_list) and any(my_list).
+
+numbers = [1, 2, 3, 4]
+print(all(num > 0 for num in numbers))  # Output: True
+
+numbers = [1, 2, -3, 4]
+print(any(num < 0 for num in numbers))  # Output: True
+-------------------------------------------------------------------------------------------------
+121)  What is a dictionary in Python?
+
+Answer: A dictionary in Python is an unordered, mutable collection of key-value pairs. Each key-value pair is separated by a colon (:), and the pairs are separated by commas. Dictionaries are enclosed in curly braces {}. 
+Keys are unique and immutable (usually strings, integers, or tuples), and values can be of any data type.
+
+my_dict = {"name": "John", "age": 25, "city": "New York"}
+-------------------------------------------------------------------------------------------------
+122) How do you create a dictionary in Python?
+
+Answer: You can create a dictionary in Python using curly braces {} or the dict() constructor.
+
+using curly braces {}:
+my_dict = {"name": "John", "age": 25, "city": "New York"}
+
+using dict():
+my_dict = dict(name="Bob", age=24, city="London")
+-------------------------------------------------------------------------------------------------
+123) What is the difference between a dictionary and a list in Python?
+
+Answer : Dictionaries are unordered collections of key-value pairs, 
+where each key must be unique and immutable (e.g., strings, integers). 
+The values associated with these keys can be of any data type.
+
+Lists are ordered collections that store items in a sequence. 
+Lists allow duplicate elements and can contain items of any type, but their indices are integers starting from 0.
+-------------------------------------------------------------------------------------------------
+124) How can you access the value associated with a key in a dictionary?
+
+Answer: You can access the value of a key using square brackets [] or the get() method.
+
+my_dict = {"name": "John", "age": 25}
+
+using of [] brackets:
+
+    print(my_dict["name"])  # Output: John
+
+using of get() :
+
+    print(my_dict.get("age"))  # Output: 25
+
+-------------------------------------------------------------------------------------------------
+125) How do you update the value of an existing key in a dictionary?
+Answer: You can update the value of an existing key by reassigning it using the square brackets.
+
+Example:
+my_dict = {"name": "John", "age": 25}
+
+my_dict["age"] = 26
+
+print(my_dict)  # Output: {"name": "John", "age": 26}
+-------------------------------------------------------------------------------------------------
+126) How do you remove a key-value pair from a dictionary?
+
+Answer: You can remove a key-value pair using:
+
+del keyword : 
+    my_dict = {"name": "John", "age": 25}
+    del my_dict["age"]
+    print(my_dict)  # Output: {"name": "John"}
+
+pop() method : 
+
+    value = my_dict.pop("name")
+    print(my_dict)  # Output: {}
+    print(value)    # Output: John
+
+popitem() method (removes the last inserted key-value pair)
+-------------------------------------------------------------------------------------------------
+127) What is the clear() method used for in dictionaries?
+
+Answer: The clear() method removes all the key-value pairs from the dictionary, effectively making it an empty dictionary.
+
+e.g.  my_dict = {"name": "John", "age": 25}
+my_dict.clear()
+print(my_dict)  # Output: {}
+-------------------------------------------------------------------------------------------------
+
+128) How do you check if a key exists in a dictionary?
+
+Answer: You can check if a key exists in a dictionary using the in keyword or the get() method.
+
+    my_dict = {"name": "Alice", "age": 30}
+    print("name" in my_dict)  # Output: True
+    print("address" in my_dict)  # Output: False
+
+using of get() : 
+
+    if my_dict.get("age"):
+        print("Key exists")
+-------------------------------------------------------------------------------------------------
+129) What are dictionary views in Python?
+
+Answer: Dictionary views provide dynamic views on the dictionary’s keys, values, and items. 
+These views can be accessed using keys(), values(), and items() methods.
+
+my_dict = {"name": "Alice", "age": 30}
+
+# keys view
+print(my_dict.keys())   # Output: dict_keys(['name', 'age'])
+
+# values view
+print(my_dict.values()) # Output: dict_values(['Alice', 30])
+
+# items view
+print(my_dict.items())  # Output: dict_items([('name', 'Alice'), ('age', 30)])
+-------------------------------------------------------------------------------------------------
+130) How can you merge two dictionaries in Python?
+
+Answer: You can merge two dictionaries in Python using the update() method, 
+or using the | (pipe) operator in Python 3.9+.
+
+using of update():
+    dict1 = {"name": "John"}
+    dict2 = {"age": 30}
+    dict1.update(dict2)
+    print(dict1)  # Output: {"name": "John", "age": 30}
+
+Example using | operator (Python 3.9+):
+
+    dict1 = {"name": "John"}
+    dict2 = {"age": 30}
+    merged_dict = dict1 | dict2
+    print(merged_dict)  # Output: {"name": "John", "age": 30}
+
+-------------------------------------------------------------------------------------------------
+131) What happens when you use the popitem() method on a dictionary?
+
+Answer: The popitem() method removes and returns a random key-value pair from the dictionary. 
+In Python 3.7+ (which guarantees insertion order), it removes the last inserted key-value pair.
+
+Example : 
+    my_dict = {"name": "John", "age": 25}
+    key, value = my_dict.popitem()
+    print(key, value)  # Output: age 25
+    print(my_dict)     # Output: {"name": "John"}
+
+-------------------------------------------------------------------------------------------------
+132) Can a dictionary have mutable objects as values?
+Answer: Yes, a dictionary can have mutable objects as values. 
+For example, lists, sets, or other dictionaries can be used as values.
+
+Example :
+    my_dict = {"name": "Alice", "friends": ["Bob", "Charlie"]}
+    my_dict["friends"].append("David")
+    print(my_dict)  # Output: {"name": "Alice", "friends": ["Bob", "Charlie", "David"]}
+
+-------------------------------------------------------------------------------------------------
+133) What is a nested dictionary in Python?
+Answer: A nested dictionary is a dictionary where some of the values are also dictionaries.
+
+Example :
+
+nested_dict = {
+    "person1": {"name": "Alice", "age": 30},
+    "person2": {"name": "Bob", "age": 25}
+}
+
+print(nested_dict["person1"]["name"])  # Output: Alice
+-------------------------------------------------------------------------------------------------
+134) Can dictionary keys be mutable?
+
+Answer: No, dictionary keys must be immutable (hashable) types, such as strings, numbers, or tuples. 
+You cannot use a list, set, or other dictionaries as keys because they are mutable.
+
+my_dict = {["key1"]: "value"}  # This will raise a TypeError
+
+-------------------------------------------------------------------------------------------------
+135) How do you iterate over a dictionary?
+
+Answer: You can iterate over the keys, values, or key-value pairs in a dictionary.
+
+Iterating over keys:
+
+my_dict = {"name": "Alice", "age": 25}
+for key in my_dict:
+    print(key)  # Output: 'name', 'age'
+
+Iterating over values:
+
+for value in my_dict.values():
+    print(value)  # Output: 'Alice', 25
+
+Iterating over key-value pairs:
+
+for key, value in my_dict.items():
+    print(f"{key}: {value}")  # Output: name: Alice, age: 25
+
+-------------------------------------------------------------------------------------------------
+136) How do you sort a dictionary by keys or values?
+
+Answer: You can sort a dictionary by keys or values using the sorted() function, 
+which returns a sorted list of tuples.
+
+Example: Sort by keys:
+
+    my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+    sorted_dict_by_key = dict(sorted(my_dict.items()))
+    print(sorted_dict_by_key)  # Output: {'age': 25, 'city': 'New York', 'name': 'Alice'}
+
+Example: Sort by values:
+
+    sorted_dict_by_value = dict(sorted(my_dict.items(), key=lambda item: item[1]))  // return each item as tuple 
+                                                                    e.g.  (id , 10)  item[1] means 10 not id
+
+    print(sorted_dict_by_value)  # Output: {'name': 'Alice', 'age': 25, 'city': 'New York'}
+
+-------------------------------------------------------------------------------------------------
+137) What happens if you try to access a key that doesn’t exist in a dictionary?
+Answer: If you try to access a key that does not exist in a dictionary using square brackets ([]), 
+it will raise a KeyError.
+
+Example : 
+
+    my_dict = {"name": "Alice", "age": 25}
+    print(my_dict["city"])  # Raises KeyError
+
+To handle this gracefully, you can use the get() method, 
+which will return None if the key is not found (or a specified default value).
+
+Example:
+    print(my_dict.get("city"))  # Output: None
+    print(my_dict.get("city", "Not Available"))  # Output: Not Available
+
+-------------------------------------------------------------------------------------------------
+138) What is the setdefault() method in Python dictionaries?
+
+Answer: The setdefault() method is used to get the value of a key in the dictionary. 
+If the key does not exist, it will insert the key with a specified default value.
+
+example : 
+
+    my_dict = {"name": "Alice", "age": 25}
+    value = my_dict.setdefault("city", "New York")
+    print(value)  # Output: New York
+    print(my_dict)  # Output: {'name': 'Alice', 'age': 25, 'city': 'New York'}
+
+    # If the key exists, the method does nothing and returns the value.
+    existing_value = my_dict.setdefault("age", 30)
+    print(existing_value)  # Output: 25 (since 'age' exists in the dictionary)
+
+-------------------------------------------------------------------------------------------------
+139) How can you get the keys or values as a list in a dictionary?
+
+Answer: You can convert the dictionary's keys or values to a list by using list() 
+along with keys() or values() methods.
+
+Example : 
+
+    my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+
+    # Get keys as a list
+    keys_list = list(my_dict.keys())
+    print(keys_list)  # Output: ['name', 'age', 'city']
+
+    # Get values as a list
+    values_list = list(my_dict.values())
+    print(values_list)  # Output: ['Alice', 25, 'New York']
+
+-------------------------------------------------------------------------------------------------
+140) How do you create a dictionary from two lists in Python?
+
+Answer: You can use the zip() function to combine two lists into a dictionary.
+One list will be used as keys, and the other as values.
+
+Example : 
+    keys = ["name", "age", "city"]
+    values = ["Alice", 25, "New York"]
+
+    my_dict = dict(zip(keys, values))
+    print(my_dict)  # Output: {'name': 'Alice', 'age': 25, 'city': 'New York'}
+
+-------------------------------------------------------------------------------------------------
+141) What is the collections.defaultdict class in Python?
+
+Answer: defaultdict is a subclass of Python's built-in dict. 
+It provides a default value for non-existent keys instead of raising a KeyError.
+When you access a key that doesn't exist, defaultdict 
+will return a default value specified during the initialization.
+
+Example:
+    from collections import defaultdict
+
+    # Create a defaultdict with a default value of 0 for missing keys
+    my_dict = defaultdict(int)
+    my_dict["a"] = 1
+    print(my_dict["a"])  # Output: 1
+    print(my_dict["b"])  # Output: 0 (default value for int is 0)
+
+-------------------------------------------------------------------------------------------------
+142) What are the methods available for dictionaries in Python?
+
+Answer : Python dictionaries come with several built-in methods. Some of the most commonly used ones are:
+
+keys(): Returns a view object of all the dictionary's keys.
+
+values(): Returns a view object of all the dictionary's values.
+
+items(): Returns a view object of all the dictionary's key-value pairs.
+
+get(key, default=None): Returns the value associated with the key, or a default value if the key doesn't exist.
+
+update(other_dict): Updates the dictionary with key-value pairs from another dictionary or iterable.
+
+pop(key): Removes the specified key and returns the corresponding value.
+
+popitem(): Removes and returns a random key-value pair (last inserted in Python 3.7+)
+
+clear(): Removes all items from the dictionary.
+
+setdefault(key, default=None): Returns the value of the key if it exists, otherwise inserts the key with a default value.
+
+copy(): Returns a shallow copy of the dictionary.
+
+-------------------------------------------------------------------------------------------------
+143) How do you iterate over dictionary keys and values simultaneously?
+
+Answer: You can iterate over both keys and values at the same time using the items() method.
+
+my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+
+for key, value in my_dict.items():
+    print(f"Key: {key}, Value: {value}")
+
+Example : 
+    Key: name, Value: Alice
+    Key: age, Value: 25
+    Key: city, Value: New York
+-------------------------------------------------------------------------------------------------
+144) What is the difference between == and is when comparing dictionaries?
+
+Answer: 
+    == checks if the dictionaries have the same key-value pairs. It compares the contents of the dictionaries.
+
+    is checks if two dictionaries refer to the same object in memory (i.e., they are the same instance).
+
+Example:
+    dict1 = {"name": "Alice", "age": 25}
+    dict2 = {"name": "Alice", "age": 25}
+    dict3 = dict1
+
+    print(dict1 == dict2)  # Output: True (same key-value pairs)
+    print(dict1 is dict2)  # Output: False (different objects in memory)
+    print(dict1 is dict3)  # Output: True (both refer to the same object)
+
+-------------------------------------------------------------------------------------------------
+145) How do you reverse the keys and values in a dictionary?
+
+Answer: You can reverse the keys and values in a dictionary by using a dictionary comprehension or a loop.
+
+Example using dictionary comprehension:
+
+my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+reversed_dict = {v: k for k, v in my_dict.items()}
+print(reversed_dict)  # Output: {'Alice': 'name', 25: 'age', 'New York': 'city'}
+
+-------------------------------------------------------------------------------------------------
+146) Can you have a dictionary with a list as a key?
+
+Answer: No, dictionary keys must be hashable (immutable), and lists are mutable. 
+Therefore, you cannot use a list as a key in a dictionary. You would get a TypeError.
+
+e.g. 
+# This will raise a TypeError:
+my_dict = {[1, 2, 3]: "value"}  # TypeError: unhashable type: 'list'
+
+
+However, you can use a tuple (which is immutable) as a key.
+
+e.g. 
+
+my_dict = {("a", "b", "c"): "value"}
+print(my_dict)  # Output: {('a', 'b', 'c'): 'value'}
+
+-------------------------------------------------------------------------------------------------
+147)  How do you check the length of a dictionary?
+
+Answer: You can use the len() function to get the number of key-value pairs in a dictionary
+
+my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+print(len(my_dict))  # Output: 3
+
+-------------------------------------------------------------------------------------------------
+148) What is a function in Python?
+
+Answer: A function in Python is a block of code that is designed to perform a specific task. 
+Functions allow for modularity, reusability, and abstraction. 
+
+You can define a function using the def keyword, followed by the function name and optional parameters.
+
+example: 
+
+def greet(name):
+    return f"Hello, {name}!"
+
+# Calling the function
+print(greet("Alice"))  # Output: Hello, Alice!
+
+-------------------------------------------------------------------------------------------------
+149) What are the different types of arguments in Python functions?
+
+Answer: Python functions can accept different types of arguments:
+
+Positional arguments: These are the most common type and are passed in the correct order.
+
+def add(a, b):
+    return a + b
+print(add(3, 5))  # Output: 8
+
+Keyword arguments: These are passed as key-value pairs and can be provided in any order.
+
+def greet(name, age):
+    return f"{name} is {age} years old."
+print(greet(age=25, name="Alice"))  # Output: Alice is 25 years old.
+
+Default arguments: These are arguments that take a default value if no value is provided.
+
+def greet(name, message="Hello"):
+    return f"{message}, {name}!"
+print(greet("Alice"))  # Output: Hello, Alice!
+print(greet("Bob", "Good Morning"))  # Output: Good Morning, Bob!
+
+Variable-length arguments (*args and **kwargs):
+
+*args: Used to pass a variable number of positional arguments as a tuple.
+**kwargs: Used to pass a variable number of keyword arguments as a dictionary.
+
+Example with *args:
+
+def add(*args):
+    return sum(args)
+print(add(1, 2, 3))  # Output: 6
+
+Example with **kwargs:
+
+def greet(**kwargs):
+    return f"Hello, {kwargs.get('name', 'Guest')}!"
+print(greet(name="Alice"))  # Output: Hello, Alice!
+
+-------------------------------------------------------------------------------------------------
+150) What is the difference between *args and **kwargs in function definitions?
+Answer:
+
+*args: Allows a function to accept any number of positional arguments (arguments that aren't named when passed to the function). These arguments are stored as a tuple inside the function.
+
+def func(*args):
+    for arg in args:
+        print(arg)
+
+**kwargs: Allows a function to accept any number of keyword arguments (arguments passed with a name). These arguments are stored as a dictionary inside the function.
+
+def func(**kwargs):
+    for key, value in kwargs.items():
+        print(key, value)
+
+def func(*args, **kwargs):
+    print("Positional arguments:", args)
+    print("Keyword arguments:", kwargs)
+
+func(1, 2, 3, a=4, b=5)
+
+# Output:
+# Positional arguments: (1, 2, 3)
+# Keyword arguments: {'a': 4, 'b': 5}
+-------------------------------------------------------------------------------------------------
+151) What is a lambda function in Python?
+
+Answer: A lambda function is a small anonymous function defined using the lambda keyword. 
+It can have any number of arguments, but only one expression, which is evaluated and returned.
+
+lambda arguments: expression
+
+multiply = lambda x, y: x * y
+print(multiply(3, 4))  # Output: 12
+
+Lambda functions are often used for short, throwaway functions, typically in higher-order functions like map(), filter(), and sorted().
+
+-------------------------------------------------------------------------------------------------
+152) What is the purpose of the return statement in Python functions?
+
+Answer: The return statement is used to exit a function and optionally pass a value back to the caller.
+Once a return statement is executed, the function terminates, and any code after the return statement is not executed
+
+def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print(result)  # Output: 8
+
+If no return statement is provided, the function returns None by default
+-------------------------------------------------------------------------------------------------
+153) Can a function return multiple values in Python?
+Answer: Yes, a function can return multiple values as a tuple.
+You can return any number of values, and Python will automatically package them into a tuple.
+
+def min_max(a, b):
+    return min(a, b), max(a, b)
+
+result = min_max(3, 5)
+print(result)  # Output: (3, 5)
+
+min_value, max_value = min_max(3, 5)
+print(min_value)  # Output: 3
+print(max_value)  # Output: 5
+
+-------------------------------------------------------------------------------------------------
+154) What is the purpose of the global keyword in Python?
+
+Answer: The global keyword is used to declare that a variable inside a function refers to a variable that exists in the global scope (outside the function). 
+Without the global keyword, Python treats variables inside functions as local.
+
+x = 10
+
+def change_value():
+    global x
+    x = 20
+
+change_value()
+print(x)  # Output: 20
+
+Without the global keyword, the function would create a local variable x, 
+and the global variable x would remain unchanged.
+
+-------------------------------------------------------------------------------------------------
+155) What is the nonlocal keyword in Python?
+
+Answer: The nonlocal keyword is used to work with variables inside nested functions,
+where the variable should not be treated as a local variable but should refer to a variable in the nearest enclosing scope.
+
+def outer():
+    x = 10
+
+    def inner():
+        nonlocal x
+        x = 20
+
+    inner()
+    print(x)  # Output: 20
+
+outer()
+
+In this example, x inside the inner() function refers to the x in the outer() function, not a local variable.
+-------------------------------------------------------------------------------------------------
+156) What is the difference between del and return inside a function?
+
+del: Used to delete an object (a variable, list element, or key in a dictionary) from memory. 
+It does not return a value or exit a function.
+
+my_dict = {"name": "Alice", "age": 25}
+del my_dict["age"]
+print(my_dict)  # Output: {'name': 'Alice'}
+
+return: Used to exit the function and return a value to the caller. 
+Once a return statement is executed, the function stops, and the control is passed back to the caller.
+
+def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print(result)  # Output: 8
+
+-------------------------------------------------------------------------------------------------
+157) What are recursive functions in Python?
+
+Answer: A recursive function is a function that calls itself in order to solve a problem. Recursive functions usually have a base case that terminates the recursion to prevent infinite loops.
+e.g. 
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))  # Output: 120
+
+the function factorial() calls itself with decreasing values of n until it reaches n == 0, at which point it stops.
+-------------------------------------------------------------------------------------------------
+158) What is a higher-order function in Python?
+Answer: A higher-order function is a function that takes one or more functions as arguments or returns a function as its result. Python's built-in functions like map(), filter(), and reduce() are examples of higher-order functions.
+
+e.g. 
+def apply_function(f, x):
+    return f(x)
+
+def square(n):
+    return n * n
+
+print(apply_function(square, 4))  # Output: 16
+
+-------------------------------------------------------------------------------------------------
+159) What is function overloading in Python?
+
+Answer: Python does not support function overloading in the traditional sense (like in languages such as Java or C++). However, you can achieve similar functionality by using default arguments, variable-length arguments (*args), or conditionally checking the arguments inside the function.
+
+Example using default arguments:
+
+def greet(name="Guest", message="Hello"):
+    return f"{message}, {name}!"
+
+print(greet())  # Output: Hello, Guest!
+print(greet("Alice"))  # Output: Hello, Alice!
+print(greet("Bob", "Good Morning"))  # Output: Good Morning, Bob!
+
+-------------------------------------------------------------------------------------------------
+160) What is a module in Python, and why would you use one?
+
+Answer:
+
+A Python module is a file containing Python definitions, functions, classes, and variables, 
+as well as runnable code. Modules help you organize and reuse code across different parts of your 
+program or even across multiple projects. 
+
+They are used to avoid redundancy, encapsulate functionality, 
+and improve maintainability.
+
+Example: If you have a module called math_operations.py, 
+
+it might contain functions like add(a, b) or multiply(a, b).
+
+By importing this module into another script, you can reuse those functions without rewriting them.
+
+# math_operations.py
+def add(a, b):
+    return a + b
+
+# main.py
+import math_operations
+result = math_operations.add(2, 3)
+print(result)  # Outputs: 5
+-------------------------------------------------------------------------------------------------
+161) How do you create a module in Python?
+Question: How do you create a module in Python?
+
+Answer:
+To create a module in Python, simply create a Python file with a .py extension and define functions, classes, 
+and variables in that file. For example, create a file called mymodule.py:
+
+# mymodule.py
+def greet(name):
+    return f"Hello, {name}!"
+
+You can then import and use the module in another Python file:
+
+# main.py
+import mymodule
+print(mymodule.greet("Alice"))
+-------------------------------------------------------------------------------------------------
+162) What are built-in modules in Python?
+
+Answer:
+Built-in modules are Python modules that are available by default with the Python installation, so you don't need to install them separately. These modules provide various utilities for tasks like file I/O, system operations, math, string handling, etc.
+
+Examples:
+
+math: Provides mathematical functions like sqrt(), sin(), cos(), etc.
+os: Provides functions for interacting with the operating system, such as file manipulation and process management.
+sys: Provides access to system-specific parameters and functions.
+datetime: Handles date and time-related operations.
+-------------------------------------------------------------------------------------------------
+163) What is the difference between import and from ... import in Python?
+
+Answer:
+
+import module loads the entire module and you access its functions or variables using module.function() syntax.
+from module import function imports specific functions, classes, 
+or variables directly into the current namespace, so you can use them without qualifying the module name.
+
+Example of import:
+
+import math
+print(math.sqrt(16))  # You need to specify the module name 'math'
+
+Example of from ... import:
+
+from math import sqrt
+print(sqrt(16))  # You can use the function directly without 'math.'
+-------------------------------------------------------------------------------------------------
+164) What is the purpose of __init__.py in Python modules?
+
+Answer:
+
+The __init__.py file is used to mark a directory as a Python package. 
+It can be empty or contain initialization code for the package. 
+Without this file, Python will not recognize the directory as a package and will not allow imports from it.
+
+For example, if you have a directory structure like this:
+
+my_package/
+    __init__.py
+    module1.py
+    module2.py
+
+You can import module1 and module2 from my_package:
+
+e.g. import my_package.module1
+
+The __init__.py file can also contain initialization code for the package, like importing specific functions for convenience:
+
+# my_package/__init__.py
+from .module1 import function1
+
+This way, you can directly import function1 like this:
+
+from my_package import function1
+-------------------------------------------------------------------------------------------------
+165) What is the sys.path in Python?
+
+Answer:
+sys.path is a list in Python that contains the directories where Python looks for modules. 
+It includes the current directory, the standard library directories, 
+and any directories specified by the PYTHONPATH environment variable.
+
+You can view or modify sys.path to add custom directories where Python should look for modules:
+
+import sys
+print(sys.path)  # Display current module search paths
+
+# Adding a custom path
+sys.path.append('/path/to/custom/modules')
+
+-------------------------------------------------------------------------------------------------
+166) What is the purpose of the dir() function in Python?
+
+Answer:
+The dir() function, when used with a module, returns a list of all the functions, 
+classes, and variables defined in that module. 
+
+It is useful for exploring the contents of a module, especially when you're unfamiliar with it.
+
+e.g.
+
+import math
+print(dir(math))  # Displays a list of all attributes of the math module
+
+-------------------------------------------------------------------------------------------------
+167)  How would you import a third-party module or a module not included in the standard Python distribution?
+
+Answer:
+To use a third-party module, you need to install it using a package manager like pip. Once installed,
+you can import the module just like any other Python module.
+
+For example, to install and use the requests module:
+
+pip install requests
+
+
+e.g.
+
+import requests
+response = requests.get("https://www.example.com")
+print(response.status_code)
+
+-------------------------------------------------------------------------------------------------
+168) What is exception handling, and why is it important in Python?
+
+Answer : 
+Exception handling in Python is a mechanism to handle runtime errors or exceptions gracefully. 
+Instead of letting a program crash when an error occurs, exception handling allows us to catch and handle errors, enabling the program to continue execution or fail gracefully.
+
+The basic structure for handling exceptions in Python is using the try, except, else, and finally blocks.
+
+e.g.
+
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+-------------------------------------------------------------------------------------------------
+169)  What is the syntax for handling exceptions in Python?
+
+The basic syntax of exception handling in Python involves four blocks: try, except, else, and finally.
+
+try:
+    # Code that might raise an exception
+    result = 10 / 0
+except ZeroDivisionError:
+    # Handling exception
+    print("Cannot divide by zero.")
+else:
+    # Code that runs if no exception occurs
+    print("Division was successful.")
+finally:
+    # Code that always runs (whether exception occurred or not)
+    print("This always executes.")
+
+
+try: Contains code that might raise an exception.
+except: Catches specific exceptions and handles them.
+else: Executes if no exception occurs in the try block.
+finally: Executes whether an exception occurred or not, useful for cleanup operations 
+(e.g., closing files or releasing resources).
+
+-------------------------------------------------------------------------------------------------
+170) What types of exceptions does Python provide?
+
+Python provides several built-in exceptions. Some common ones are:
+
+SyntaxError: Raised when Python encounters a syntax error.
+
+ZeroDivisionError: Raised when dividing by zero.
+
+ValueError: Raised when a function receives an argument of the right type but an inappropriate value.
+
+IndexError: Raised when trying to access an index that is out of range.
+
+KeyError: Raised when trying to access a dictionary with a key that does not exist.
+
+TypeError: Raised when an operation or function is applied to an object of inappropriate type.
+
+FileNotFoundError: Raised when a file operation (open, read, etc.) fails due to the file not being found.
+
+AttributeError: Raised when an attribute reference or assignment fails.
+
+-------------------------------------------------------------------------------------------------
+171) What happens if an exception is not handled in Python?
+Answer:
+
+If an exception is not caught by an except block, it will propagate up the call stack. 
+If it reaches the top level (i.e., the script or the main program), the Python interpreter will terminate the program and print a traceback, which includes information about the exception and where it occurred.
+
+def divide(x, y):
+    return x / y
+
+# No exception handling here
+print(divide(10, 0))  # This will raise a ZeroDivisionError
+-------------------------------------------------------------------------------------------------
+172) How can you handle multiple exceptions in a single except block?
+
+Answer:
+You can handle multiple exceptions in a single except block by specifying a tuple of exception types. If any of the exceptions in the tuple occur, the block will handle it.
+
+Example:
+
+try:
+    # Some code that may raise different exceptions
+    value = int(input("Enter a number: "))
+    result = 10 / value
+except (ValueError, ZeroDivisionError) as e:
+    print(f"Error: {e}")
+
+------------------------------------------------------------------------------------------------
+173) What is the difference between raise and assert in Python?
+
+raise: Used to explicitly raise an exception. It is typically used when you want to trigger an exception manually, either as part of error handling or when detecting certain conditions that require an exception.
+
+raise ValueError("This is a custom error.")
+
+assert: Used for debugging purposes. It tests a condition, and if the condition is False, 
+it raises an AssertionError. It is often used to catch bugs during development but should not be used for handling runtime errors in production code.
+
+assert x > 0, "x must be greater than zero"
+
+------------------------------------------------------------------------------------------------
+174) Can you create custom exceptions in Python? How?
+
+Yes, you can create custom exceptions by subclassing Python’s built-in Exception class or any of its derived classes.
+
+class CustomError(Exception):
+    """Custom exception for specific error handling."""
+    pass
+
+def some_function():
+    raise CustomError("Something went wrong.")
+
+try:
+    some_function()
+except CustomError as e:
+    print(f"Caught an error: {e}")
+
+In this example, a custom exception CustomError is defined, and it is raised and caught in the try-except block.
+------------------------------------------------------------------------------------------------
+175) What is the purpose of the else block in exception handling?
+
+Answer:
+
+The else block is executed only if no exceptions were raised in the try block. 
+It is useful for code that should run only if everything in the try block executed successfully, without exceptions.
+
+try:
+    x = 10 / 2
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+else:
+    print("Division successful.")
+
+If no exception is raised, the output will be "Division successful."
+------------------------------------------------------------------------------------------------
+176) What is the finally block used for?
+
+The finally block is used for cleanup actions that must always run, regardless of whether an exception was raised or not. 
+
+It is useful for things like closing files, releasing resources, or performing necessary cleanup after executing code in the try block.
+
+try:
+    file = open("example.txt", "r")
+    data = file.read()
+except FileNotFoundError:
+    print("File not found.")
+finally:
+    file.close()  # Ensures the file is always closed
+
+------------------------------------------------------------------------------------------------
+177) What is the purpose of the Exception class in Python?
+
+The Exception class is the base class for all built-in exceptions in Python, 
+except for system-exit-related exceptions. 
+
+All user-defined exceptions should inherit from the Exception class (or one of its subclasses). 
+It allows you to catch general exceptions without knowing the specific exception type.
+
+try:
+    # some code that may raise exceptions
+    x = int(input("Enter a number: "))
+except Exception as e:
+    print(f"An error occurred: {e}")
+------------------------------------------------------------------------------------------------
+178) Can you re-raise an exception in Python? How?
+
+Answer:
+Yes, you can re-raise an exception in Python using the raise keyword without specifying the exception.
+This is useful when you want to perform some actions (like logging) and then let the exception propagate.
+
+try:
+    x = 1 / 0
+except ZeroDivisionError as e:
+    print("Caught exception:", e)
+    raise  # Re-raises the caught exception
+
+------------------------------------------------------------------------------------------------
+179) What is the difference between try...except and try...finally?
+
+try...except: Handles exceptions by catching specific errors and allowing the program to continue executing after handling the error.
+
+try...finally: Ensures that the code inside the finally block will run regardless of whether an exception occurred, often used for cleanup or releasing resources.
+
+try:
+    # Some risky code
+    file = open('data.txt', 'r')
+finally:
+    file.close()  # Will always be executed, even if an exception occurred
+
+------------------------------------------------------------------------------------------------
+180) What is Object-Oriented Programming (OOP)?
+
+Object-Oriented Programming (OOP) is a programming paradigm that organizes code into objects. 
+These objects are instances of classes, which define the properties (attributes) and behaviors (methods) that the objects can have. 
+
+The core principles of OOP are:
+
+Encapsulation: Bundling data (attributes) and methods (functions) that operate on the data into a single unit (class).
+
+Abstraction: Hiding complex implementation details and exposing only the necessary parts of an object.
+
+Inheritance: A mechanism to create a new class using the properties and methods of an existing class.
+
+Polymorphism: The ability to use the same method or operator in different ways, 
+depending on the context (such as method overriding or overloading).
+
+------------------------------------------------------------------------------------------------
+181) What is a class and an object in Python?
+Answer:
+
+Class: A class is a blueprint for creating objects.
+It defines the properties (attributes) and behaviors (methods) that the objects created from the class will have.
+
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+    def speak(self):
+        print(f"{self.name} says woof!")
+
+Object: An object is an instance of a class. It is created from the class and has its own attributes and methods. Each object can have different attribute values.
+
+dog1 = Dog("Buddy", "Golden Retriever")
+dog2 = Dog("Max", "Bulldog")
+
+------------------------------------------------------------------------------------------------
+182) What is the difference between __init__ and __del__ methods in Python?
+
+__init__: The __init__ method is the constructor method. 
+It is automatically called when a new instance (object) of the class is created. 
+It is used to initialize the object's attributes.
+
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+__del__: The __del__ method is the destructor method. 
+It is called when an object is about to be destroyed (when it is no longer referenced). 
+It is often used to clean up resources, such as closing files or network connections.
+
+class Dog:
+    def __del__(self):
+        print(f"{self.name} is being deleted.")
+
+------------------------------------------------------------------------------------------------
+183) What is the difference between class variables and instance variables in Python?
+
+Instance Variables: Instance variables are specific to an instance (object) of a class. 
+
+They are defined within the __init__ method and are prefixed with self, 
+meaning each object can have different values for these variables.
+
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name  # instance variable
+        self.breed = breed  # instance variable
+
+Class Variables: Class variables are shared among all instances of a class. They are defined inside the class but outside any methods and are not prefixed with self. Any change to a class variable will affect all instances of the class.
+
+class Dog:
+    species = "Canine"  # class variable
+
+------------------------------------------------------------------------------------------------
+184) What is inheritance in Python?
+
+Inheritance is a mechanism where a new class (child class) can inherit attributes and methods from an existing class (parent class). 
+This allows code reuse and helps in creating a hierarchy of classes.
+
+class Animal:
+    def speak(self):
+        print("Animal speaking")
+
+class Dog(Animal):  # Dog inherits from Animal
+    def speak(self):
+        print("Woof!")
+
+dog = Dog()
+dog.speak()  # Output: Woof!
+------------------------------------------------------------------------------------------------
+185) What is method overriding in Python?
+
+Method overriding occurs when a subclass provides a specific implementation of a method that is already 
+defined in its parent class. This allows the subclass to modify or extend the behavior of the parent class method.
+
+class Animal:
+    def sound(self):
+        print("Animal makes a sound")
+
+class Dog(Animal):
+    def sound(self):  # overriding parent class method
+        print("Dog barks")
+
+dog = Dog()
+dog.sound()  # Output: Dog barks
+
+------------------------------------------------------------------------------------------------
+186) What is polymorphism in Python?
+
+Answer:
+Polymorphism is the ability of different objects to respond to the same method or operator in different ways.
+It can be achieved through:
+
+Method Overloading: Python does not support method overloading in the 
+traditional sense (multiple methods with the same name but different parameters), but it can be emulated by default arguments.
+
+Method Overriding: As explained earlier, where a subclass redefines a method of its superclass.
+
+
+Example (Method Overloading using default arguments):
+
+class Calculator:
+    def add(self, a, b=0):
+        return a + b
+
+calc = Calculator()
+print(calc.add(5))      # Output: 5 (uses default b=0)
+print(calc.add(5, 3))   # Output: 8
+
+------------------------------------------------------------------------------------------------
+187) What is encapsulation in Python?
+
+Encapsulation is the bundling of data (attributes) and methods (functions) that operate on that data into a single unit or class. 
+
+It also refers to restricting direct access to some of an object's components, which is achieved using access modifiers.
+
+In Python, encapsulation is implemented by using public, protected, and private access modifiers:
+
+Public: Attributes or methods that are accessible from outside the class.
+
+Protected: Attributes or methods that are intended to be accessed only within the class and its subclasses. 
+They are prefixed with a single underscore (_).
+
+Private: Attributes or methods that are not accessible from outside the class. They are prefixed with a double underscore (__).
+
+e.g.
+
+class MyClass:
+    def __init__(self):
+        self._protected = "This is protected"
+        self.__private = "This is private"
+
+obj = MyClass()
+print(obj._protected)  # Accessible
+# print(obj.__private)  # Error: 'MyClass' object has no attribute '__private'
+
+------------------------------------------------------------------------------------------------
+188) What is the difference between @staticmethod and @classmethod in Python?
+
+@staticmethod: A static method is a method that belongs to the class but doesn't require access 
+to the instance (self) or class (cls). It can be called without creating an instance of the class.
+
+
+class Math:
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+print(Math.add(5, 3))  # Output: 8
+
+@classmethod: A class method is a method that takes the class as its first argument (cls) instead of the instance (self). It can access and modify class-level variables.
+
+class MyClass:
+    class_variable = "Class Variable"
+
+    @classmethod
+    def print_class_variable(cls):
+        print(cls.class_variable)
+
+MyClass.print_class_variable()  # Output: Class Variable
+
+------------------------------------------------------------------------------------------------
+189) What is the super() function in Python?
+
+Answer:
+The super() function is used to call a method from a parent class. It is commonly used in method overriding to call the method of the parent class from the subclass.
+
+class Animal:
+    def speak(self):
+        print("Animal speaking")
+
+class Dog(Animal):
+    def speak(self):
+        super().speak()  # Call the parent class's method
+        print("Dog barks")
+
+dog = Dog()
+dog.speak()
+------------------------------------------------------------------------------------------------
+190) What is the difference between shallow copy and deep copy in Python?
+
+Shallow Copy: A shallow copy creates a new object, but does not recursively copy the objects that are contained within the original object. Instead, it copies references to those inner objects. 
+As a result, changes made to the mutable elements in the copied object will affect the original object.
+
+import copy
+original = [1, 2, [3, 4]]
+shallow = copy.copy(original)
+shallow[2][0] = 99  # Mutates the inner list
+
+print(original)  # Output: [1, 2, [99, 4]]
+
+Deep Copy: A deep copy creates a new object and recursively copies all objects found within the original object.
+Changes to the deep-copied object do not affect the original object, even for nested mutable objects.
+
+import copy
+original = [1, 2, [3, 4]]
+deep = copy.deepcopy(original)
+deep[2][0] = 99
+
+print(original)  # Output: [1, 2, [3, 4]]
+------------------------------------------------------------------------------------------------
+191) What is a getter and setter in Python?
+Answer:
+
+Getter: A getter is a method used to access the value of an attribute in a class. 
+It is commonly used when you want to control access to an attribute.
+
+Setter: A setter is a method used to modify the value of an attribute.
+Setters are used to enforce validation before assigning a value to an attribute.
+
+class Circle:
+    def __init__(self, radius):
+        self._radius = radius  # Private variable
+    
+    @property
+    def radius(self):  # Getter
+        return self._radius
+    
+    @radius.setter
+    def radius(self, value):  # Setter
+        if value < 0:
+            raise ValueError("Radius cannot be negative")
+        self._radius = value
+
+c = Circle(5)
+print(c.radius)  # Getter in action
+c.radius = 10  # Setter in action
+print(c.radius)
+
+------------------------------------------------------------------------------------------------
+192) What is abstraction in Python?
+
+Answer: Abstraction is the concept of hiding the complex implementation details of a system and exposing only the necessary features. In Python, abstraction can be achieved using abstract classes and abstract methods from the abc (Abstract Base Class) module.
+
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius * self.radius
+
+circle = Circle(5)
+print(circle.area())  # Will print area of the circle
+
+In this example, Shape is an abstract class with an abstract method area. Any subclass (like Circle) 
+must implement the area method.
+------------------------------------------------------------------------------------------------
+193) What is the self keyword in Python?
+
+Answer: In Python, self is a reference to the current instance of the class. 
+It is used to access instance variables and methods within the class. 
+It must be the first parameter of any method in a class.
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name  # self refers to the instance
+
+    def greet(self):
+        print(f"Hello, my name is {self.name}")
+
+p = Person("Alice", 30)
+p.greet()
+------------------------------------------------------------------------------------------------
+194) What is method overloading in Python?
+
+Method overloading allows a class to have multiple methods with the same name but different parameters. 
+Python doesn't support method overloading directly, 
+but we can achieve similar functionality using default arguments or variable-length arguments.
+
+class Calculator:
+    def add(self, a, b=0):
+        return a + b
+
+calc = Calculator()
+print(calc.add(5))        # Outputs: 5 (Uses default value for b)
+print(calc.add(5, 3))     # Outputs: 8 (Uses provided value for b)
+------------------------------------------------------------------------------------------------
+195)  What is multiple inheritance in Python?
+
+Answer: Multiple inheritance is a feature of Python where a class can inherit from more than one base class.
+ This allows a subclass to inherit attributes and methods from multiple parent classes.
+
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Bird:
+    def fly(self):
+        print("Bird flies")
+
+class Eagle(Animal, Bird):
+    pass
+
+eagle = Eagle()
+eagle.speak()  # Inherited from Animal class
+eagle.fly()    # Inherited from Bird class
+
+------------------------------------------------------------------------------------------------
+196) What is the method resolution order (MRO)?
+
+Answer: The Method Resolution Order (MRO) is the order in which classes are searched when calling a method.
+Python uses the C3 linearization algorithm to determine the order in which base classes are looked up. This is especially relevant in multiple inheritance situations.
+
+class A:
+    def greet(self):
+        print("Hello from class A")
+
+class B(A):
+    def greet(self):
+        print("Hello from class B")
+
+class C(A):
+    def greet(self):
+        print("Hello from class C")
+
+class D(B, C):
+    pass
+
+d = D()
+d.greet()  # Will print: Hello from class B (MRO)
+------------------------------------------------------------------------------------------------
+197) What are abstract classes and abstract methods?
+
+Answer: An abstract class is a class that cannot be instantiated on its own and is meant to be subclassed by other classes. It can contain abstract methods, 
+which are methods that have no implementation in the abstract class and must be implemented in the subclass.
+
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    @abstractmethod
+    def move(self):
+        pass
+
+class Car(Vehicle):
+    def move(self):
+        print("The car moves on the road.")
+
+# vehicle = Vehicle()  # This would raise an error as Vehicle is abstract.
+car = Car()
+car.move()  # This will print: The car moves on the road.
+------------------------------------------------------------------------------------------------
+198) What are the advantages of using OOP in Python?
+
+Answer: Object-Oriented Programming (OOP) offers several advantages:
+
+Modularity: Code is organized into classes and objects, which makes it more modular and reusable.
+
+Code Reusability: With inheritance, you can reuse existing code in new classes.
+
+Maintainability: OOP allows easier maintenance and modification of existing code because of its modular structure.
+
+Abstraction: You can hide the complex implementation details and expose only essential functionality, making code easier to use.
+
+Polymorphism: Different classes can define methods with the same name, but with different behaviors, making the code flexible and adaptable.
+
+Encapsulation: OOP allows data and functions to be bundled together and hidden from the outside world, reducing complexity and improving data security.
+
+------------------------------------------------------------------------------------------------
+199) What is the __init__ method in Python?
+
+Answer: The __init__ method in Python is the constructor method used to initialize an object when it is created.
+It is automatically called when an instance of the class is created.
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+p = Person("Alice", 30)  # __init__ is called to initialize the object
+print(p.name)  # Alice
+print(p.age)   # 30
+
+------------------------------------------------------------------------------------------------
+200) What are class variables and instance variables?
+
+Class Variables: These are variables that are shared across all instances of a class. 
+        They are defined inside the class but outside any instance methods.
+
+Instance Variables: These are variables that are unique to each instance of the class. 
+        They are typically initialized in the __init__ method.
+
+
+class Car:
+    wheels = 4  # Class variable (shared across all instances)
+
+    def __init__(self, make, model):
+        self.make = make  # Instance variable
+        self.model = model  # Instance variable
+
+car1 = Car("Toyota", "Corolla")
+car2 = Car("Honda", "Civic")
+
+print(car1.make)  # Toyota
+print(car2.make)  # Honda
+print(car1.wheels)  # 4
+print(car2.wheels)  # 4
+------------------------------------------------------------------------------------------------
+201) What is the difference between is and == in Python?
+Answer:
+
+==: Compares the values of two objects to see if they are equal. 
+    It checks if the contents are the same.
+
+is: Compares the identity of two objects, 
+    checking if they refer to the same object in memory (i.e., if they are the same object).
+
+a = [1, 2, 3]
+b = [1, 2, 3]
+
+print(a == b)  # True (because the contents are the same)
+print(a is b)  # False (because they are two different objects in memory)
+------------------------------------------------------------------------------------------------
+202) What is the map() function in Python?
+
+Answer: The map() function in Python applies a given function to all the items in an iterable 
+        (like a list, tuple, etc.) and returns a map object (an iterator) of the results.   
+
+syntax : 
+        map(function, iterable)
+
+function: The function that you want to apply to each item in the iterable.
+iterable: The iterable whose elements you want to process.
+
+def square(x):
+    return x ** 2
+
+numbers = [1, 2, 3, 4]
+squared_numbers = map(square, numbers)
+print(list(squared_numbers))  # Output: [1, 4, 9, 16]
+
+------------------------------------------------------------------------------------------------
+203) How does map() differ from a simple for loop?
+
+Answer: Both map() and a for loop can iterate over elements in an iterable and apply a function to each element, but there are some key differences:
+
+map() is more concise and functional. It returns an iterator, so you can work with large datasets efficiently without creating intermediate lists.
+
+A for loop requires manually appending results to a list (or performing actions directly) and is more imperative.
+
+using for loop : 
+
+numbers = [1, 2, 3, 4]
+squared_numbers = []
+for num in numbers:
+    squared_numbers.append(num ** 2)
+
+print(squared_numbers)  # Output: [1, 4, 9, 16]
+
+With map()
+
+squared_numbers = map(lambda x: x ** 2, numbers)
+print(list(squared_numbers))  # Output: [1, 4, 9, 16]
+
+------------------------------------------------------------------------------------------------
+204) What is the filter() function in Python?
+
+Answer: The filter() function in Python is used to construct an iterable from 
+those elements of an iterable for which a function returns True. 
+It filters out elements for which the function returns False.
+
+filter(function, iterable)
+
+function: A function that tests each element in the iterable. It should return True or False.
+iterable: The iterable whose elements you want to filter.
+
+def is_even(x):
+    return x % 2 == 0
+
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = filter(is_even, numbers)
+print(list(even_numbers))  # Output: [2, 4, 6]
+------------------------------------------------------------------------------------------------
+205) What is the difference between map() and filter() in Python?
+Answer:
+
+map(): It applies a given function to each item in the iterable and returns an iterable with the 
+        transformed items. 
+        It always returns a result, even if the function's result is None.
+
+filter(): It applies a given function to each item in the iterable and returns an iterable containing 
+only the items where the function returns True.
+
+------------------------------------------------------------------------------------------------
+206) What is Django?
+
+Answer: Django is a high-level Python web framework that encourages rapid development and clean, 
+pragmatic design. It provides a lot of built-in features like an admin interface, 
+authentication system, URL routing, and more, which helps developers focus on writing code rather than reinventing the wheel. 
+Django follows the "Don't Repeat Yourself" (DRY) principle and uses the Model-View-Template (MVT) architecture.
+
+------------------------------------------------------------------------------------------------
+207) Explain the Django MVT architecture.
+
+Answer: Django follows the Model-View-Template (MVT) architecture:
+
+Model: Represents the data structure or business logic. 
+       It defines the database schema and provides methods for querying and interacting with the data.
+View: Handles the HTTP request, processes it, and returns an HTTP response. 
+       It retrieves data from the model and renders it using templates.
+Template: The front-end part of Django. It handles the presentation logic and rendering of HTML to the user, 
+       often with dynamic content from the view.
+
+       (Note: Django uses a slight variation of the common Model-View-Controller pattern where the "View" 
+            refers to the controller and "Template" refers to the view.)
+
+------------------------------------------------------------------------------------------------
+208) What are Django's request-response cycle steps?
+Answer:
+
+HTTP Request: The user sends an HTTP request to the server.
+
+URL Routing: Django's URL dispatcher maps the request to a specific view function based on the URL.
+
+View Processing: The view function processes the request, interacts with the database (via models), and prepares data for rendering.
+
+Template Rendering: The view returns a rendered HTML page, which may include dynamic data from the models.
+
+HTTP Response: The rendered HTML is sent back to the client’s browser as the HTTP response
+    
+------------------------------------------------------------------------------------------------
+209) What is the difference between urls.py and views.py in Django?
+Answer:
+
+urls.py: This file is responsible for URL routing in Django.
+         It maps specific URL patterns to view functions or class-based views (CBVs). In other words, it defines how incoming URLs are handled.
+
+views.py: This file contains the logic that processes requests and returns responses. 
+        It defines functions or class-based views that handle user interactions, fetch data from models, and render templates.
+------------------------------------------------------------------------------------------------
+210) Explain Django ORM.
+
+Answer: Django ORM (Object-Relational Mapping) is a mechanism that allows developers 
+        to interact with the database using Python objects,
+        rather than writing raw SQL queries. Django automatically maps the model definitions (Python classes) to database tables.
+        It provides a high-level API to perform CRUD (Create, Read, Update, Delete) operations without needing to write SQL code directly.
+
+
+# models.py
+from django.db import models
+
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+    author = models.CharField(max_length=100)
+
+# You can create a new book like this:
+book = Book(title="Django for Beginners", author="John Doe")
+book.save()
+
+# Query books:
+books = Book.objects.filter(author="John Doe")
+
+------------------------------------------------------------------------------------------------
+211) What are Django middleware and its purpose?
+Answer: Django middleware is a layer of hooks that sit between the request and response cycle. 
+        Middleware components process requests globally before they reach the view or after the view has processed them.
+
+Common uses of middleware include:
+
+Session management
+Authentication
+Request/response modification
+Security (e.g., CSRF protection)
+Logging
+
+------------------------------------------------------------------------------------------------
+212) What is Django Admin?
+Answer: Django Admin is a built-in interface that allows developers to manage and interact with data stored in the 
+        database through a web interface. 
+        
+        It is a powerful tool for administrative purposes and is highly customizable.
+        The admin interface is automatically generated based on Django models and can be extended to 
+        add custom functionality like custom list views, filters, or forms.
+
+To enable Django Admin:
+
+Define models in models.py.
+Register models with the admin site in admin.py:
+
+from django.contrib import admin
+from .models import Book
+
+admin.site.register(Book)
+
+------------------------------------------------------------------------------------------------
+213) What is a Django migration and how does it work?
+Answer: Django migrations are a way to apply schema changes (like creating, modifying, or deleting database tables) 
+        to the database.           
+        
+        Migrations are used to synchronize your database schema with your Django models.
+
+Steps involved in migrations:
+
+        python manage.py makemigrations: This generates migration files based on changes made to the models.
+        python manage.py migrate: This applies the generated migration files to the database, updating the schema
+
+------------------------------------------------------------------------------------------------
+214) What are class-based views (CBVs) in Django?
+
+Answer: Class-based views (CBVs) in Django provide a more object-oriented way to define views, 
+        offering more flexibility and reuse compared to function-based views (FBVs). 
+
+        Django provides generic class-based views for common operations like displaying a list of items, 
+        creating, updating, and deleting objects.
+
+from django.views.generic import ListView
+from .models import Book
+
+class BookListView(ListView):
+    model = Book
+    template_name = 'book_list.html'
+------------------------------------------------------------------------------------------------
+215) What is a queryset in Django?
+Answer: A QuerySet is a collection of database queries in Django. 
+        It represents a set of objects from the database and can be filtered, ordered, and manipulated.
+
+# Filtering
+books = Book.objects.filter(author="John Doe")
+
+# Ordering
+books = Book.objects.all().order_by('title')
+
+# Aggregation
+from django.db.models import Count
+book_count = Book.objects.aggregate(Count('id'))
+
+QuerySets are lazy — they do not hit the database until they are evaluated.
+
+------------------------------------------------------------------------------------------------
+216) What are some security features Django provides?
+Answer: Django has several built-in security features, including:
+
+CSRF protection: Django includes middleware to prevent Cross-Site Request Forgery (CSRF) attacks.
+
+SQL injection protection: By using the ORM and parameterized queries, Django prevents SQL injection vulnerabilities.
+
+XSS protection: Django automatically escapes HTML content in templates to prevent Cross-Site Scripting (XSS) attacks.
+
+Clickjacking protection: Django provides middleware to prevent clickjacking attacks by setting the X-Frame-Options header.
+
+Password hashing: Django uses secure password hashing algorithms like PBKDF2 to store user passwords securely.
+
+Secure cookie handling: Django can be configured to use secure cookies (with the Secure flag) and HTTP-only cookies.
+
+------------------------------------------------------------------------------------------------
+217) How do you handle file uploads in Django?
+
+Answer: Django provides an easy way to handle file uploads by using FileField or ImageField 
+        in models and using forms to handle the upload process.
+
+Define a model with a FileField or ImageField.
+
+class Profile(models.Model):
+    image = models.ImageField(upload_to='profile_pics/')
+
+------------------------------------------------------------------------------------------------
+218) What is Django's "settings.py" file?
+Answer: The settings.py file in a Django project is the configuration file that contains
+        all the settings and configurations for the project. 
+        It includes settings for database connection, static files, middleware, security, and more.
+
+Some important settings include:
+
+DATABASES: Configures database connections.
+
+INSTALLED_APPS: Lists all installed Django apps.
+
+MIDDLEWARE: Contains the middleware components used in the project.
+
+TEMPLATES: Configures settings related to templates rendering.
+
+STATIC_URL, STATICFILES_DIRS: Define the static file directories.
+------------------------------------------------------------------------------------------------
+219) What is the difference between a function-based view (FBV) and a class-based view (CBV)?
+Answer:
+
+Function-Based View (FBV): A function-based view is a simple Python function that receives a web request and returns a web response.
+                It's more straightforward and explicit. FBVs are great for simple views or when you need complete control over the logic.
+
+from django.http import HttpResponse
+
+def my_view(request):
+    return HttpResponse("Hello, World!")
+
+Class-Based View (CBV): A class-based view is a more object-oriented approach to define views. CBVs provide reusable, 
+                        extendable, and more structured views. Django provides generic class-based views 
+                        that handle common patterns (like displaying lists, handling forms, etc.).
+
+
+from django.views.generic import View
+from django.http import HttpResponse
+
+class MyView(View):
+    def get(self, request):
+        return HttpResponse("Hello, World!")
+
+------------------------------------------------------------------------------------------------
+220) Explain the purpose of manage.py in a Django project.
+Answer: manage.py is a command-line utility that helps you manage various aspects of your 
+        Django project. 
+        It acts as a wrapper around django-admin.py, providing project-specific settings. 
+        Some common tasks you can perform using manage.py include:
+
+Running the development server: python manage.py runserver
+
+Creating migrations: python manage.py makemigrations
+
+Applying migrations: python manage.py migrate
+
+Creating a superuser: python manage.py createsuperuser
+
+Running tests: python manage.py test
+------------------------------------------------------------------------------------------------
+221) What is Django's settings.py file, and how is it structured?
+
+Answer: The settings.py file is the main configuration file for your Django project. 
+        It contains global settings that control how Django behaves. The file is typically structured into various sections:
+
+General settings: Project-specific settings like DEBUG, ALLOWED_HOSTS, INSTALLED_APPS, MIDDLEWARE, etc.
+
+Database settings: The DATABASES dictionary defines the database connection.
+
+Static and media settings: Defines where static files and user-uploaded files are stored (STATIC_URL, MEDIA_URL).
+
+Template settings: Defines where to find HTML templates (TEMPLATES setting).
+
+Authentication and security settings: Includes settings for password hashing, session management, and security features like CSRF_COOKIE_SECURE.
+
+# settings.py
+DEBUG = True
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'myapp',
+]
+------------------------------------------------------------------------------------------------
+222) What are Django template filters and how do you use them?
+
+Answer: Template filters in Django are used to modify the display of variables in the template. 
+        Filters can be used to format data, perform operations, and transform values.
+
+Common built-in filters:
+
+date: Formats a date object.
+
+length: Returns the length of a list or string.
+
+default: Provides a default value if a variable is empty.
+
+lower, upper: Converts strings to lowercase or uppercase.
+
+{{ user.username|lower }}   <!-- Converts username to lowercase -->
+{{ article.publish_date|date:"F j, Y" }}  <!-- Formats the date -->
+{{ value|default:"No value" }}  <!-- Displays "No value" if value is empty -->
+
+------------------------------------------------------------------------------------------------
+223) What is the @login_required decorator, and how does it work?
+
+Answer: The @login_required decorator is a Django shortcut to ensure that 
+        only authenticated users can access a specific view. 
+        When applied to a view function, it checks if the user is authenticated. 
+        If the user is not logged in, they will be redirected to the login page (which can be customized).
+
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def my_view(request):
+    return render(request, 'my_template.html')
+
+------------------------------------------------------------------------------------------------
+224) How do you optimize database queries in Django?
+
+Answer: Optimizing database queries in Django is crucial for performance, 
+        especially when working with large datasets. 
+        Some common ways to optimize queries include:
+
+        Use select_related and prefetch_related:
+
+        select_related is used for foreign key and one-to-one relationships. 
+                        It performs a SQL join and retrieves related objects in a single query.
+
+        prefetch_related 
+                        is used for many-to-many and reverse foreign key relationships and retrieves related data in separate queries.
+
+
+# Inefficient query (N+1 problem)
+books = Book.objects.all()
+for book in books:
+    print(book.author.name)
+
+# Optimized with select_related
+books = Book.objects.select_related('author').all()
+for book in books:
+    print(book.author.name)
+------------------------------------------------------------------------------------------------
+225) What is a ManyToManyField in Django?
+
+Answer: A ManyToManyField in Django represents a many-to-many relationship between two models. 
+        It creates an intermediate table that links the two models together, allowing each model to have multiple related instances.
+
+class Author(models.Model):
+    name = models.CharField(max_length=100)
+
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+    authors = models.ManyToManyField(Author)
+
+In this example, each Book can have multiple Author instances, 
+and each Author can be related to multiple Book instances. Django automatically creates the intermediate table for you.
+
+can add and remove relationships easily:
+
+book = Book.objects.get(id=1)
+author = Author.objects.get(id=1)
+book.authors.add(author)
+------------------------------------------------------------------------------------------------
+226) What is the difference between null and blank in Django model fields?
+
+null: This determines whether a database column should allow NULL values. 
+        If null=True, the column can store NULL in the database (i.e., no value is provided).
+
+blank: This determines whether a field is allowed to be empty in forms.
+       If blank=True, the field is not required in forms.
+
+Common use cases:
+
+null=True is typically used for fields like DateTimeField or ForeignKey, where it's reasonable to have a NULL value in the database.
+blank=True is often used for form validation (e.g., fields that are optional in the user interface).
+
+
+class Book(models.Model):
+    title = models.CharField(max_length=100, blank=False)
+    published_date = models.DateField(null=True, blank=True)
+
+------------------------------------------------------------------------------------------------
+227) How do you implement custom user authentication in Django?
+Answer: Django provides a built-in authentication system,
+        but you can implement custom authentication by extending the AbstractBaseUser class and BaseUserManager.
+
+Create a custom user model:
+
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.db import models
+
+class CustomUserManager(BaseUserManager):
+    def create_user(self, email, password=None, **extra_fields):
+        if not email:
+            raise ValueError('The Email field must be set')
+        email = self.normalize_email(email)
+        user = self.model(email=email, **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
+    def create_superuser(self, email, password=None, **extra_fields):
+        extra_fields.setdefault('is_staff', True)
+        extra_fields.setdefault('is_superuser', True)
+        return self.create_user(email, password, **extra_fields)
+
+class CustomUser(AbstractBaseUser):
+    email = models.EmailField(unique=True)
+    is_staff = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
+
+    objects = CustomUserManager()
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['email']
+
+------------------------------------------------------------------------------------------------
+
+228) What are Django’s QuerySet methods like filter(), exclude(), and get()?
+
+Django’s QuerySet methods are used to filter, exclude, and retrieve records from the database.
+
+filter(): Returns a QuerySet that includes objects matching the given conditions.
+
+# Get books by a specific author
+books = Book.objects.filter(author="John Doe")
+
+exclude(): Returns a QuerySet that excludes objects matching the given conditions.
+
+# Get all books except those by a specific author
+books = Book.objects.exclude(author="John Doe")
+
+get(): Retrieves a single object matching the query. It raises a DoesNotExist exception if no matching object is found, or a MultipleObjectsReturned exception if more than one object matches.
+
+# Get a book with a specific title
+book = Book.objects.get(title="Django for Beginners")
+
+------------------------------------------------------------------------------------------------
+---  Prepared by Anjali Patel 
+
+
+
+
+
+
+
+
+
+

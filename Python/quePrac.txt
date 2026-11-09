@@ -1,0 +1,160 @@
+String Based
+
+21. Reverse a string.
+s = "hello"
+list_s = s[::-1]
+
+print(list_s)
+reversed_s = "".join(reversed("hello"))
+print(reversed_s)
+
+22. Check palindrome string.
+s = "madam"
+rev = ""
+for i in s:
+    rev = i + rev
+if rev == s:
+    print("palindrome")
+else:
+    print("not")
+
+s = "mffadam"
+if s == s[::-1]:
+    print("palindrome")
+else:
+    print("not")
+
+23. Count vowels in a string.
+s = "mffadam"
+count = 0
+for i in s:
+    if i in "aeious":
+        count += 1
+print(count)
+
+24. Count consonants in a string.
+
+
+25. Find frequency of each character.
+s = "mffadam"
+freq = {}
+for i in s:
+    if i in freq:
+        freq[i] += 1
+    else:
+        freq[i] = 1
+for k,v in freq.items():
+    print(k,v)
+
+26. Remove spaces from string.
+s = "  mffad   am  "
+a = s.strip()
+b = a[0:5]
+c = a[8:10]
+d = b+c
+print(d)
+
+s = "  mffad   am  "
+a = s.strip()
+print(a.replace(" ",""))
+
+27. Convert string to uppercase/lowercase.
+
+28. Find longest word in sentence.
+s = "jacccll real"
+b = s.split()
+long_s = b[0]
+for i in s:
+    if len(i) > len(long_s):
+        long_s = i
+print(long_s)
+29. Replace character in string.
+
+30. Check anagram strings.
+s = "listen"
+a = "silent"
+
+if sorted(s) == sorted(a):
+    print("Anagram")
+else:
+    print("Not Anagram")
+List Based
+
+31. Find 2ndlargest element in list.
+l1 = [10,40,3,44,555]
+l1.sort()
+print(l1[-2])
+
+32. Find smallest element in list.
+
+33. Remove duplicates from list.
+
+34. Sort list ascending/descending.
+
+35. Reverse a list.
+
+36. Find second largest number in list.
+l1 = [10,40,3,44,555]
+l1.sort()
+print(l1[-2])
+
+
+37. Merge two lists.
+l1 = [10,40,3,44,555]
+l2 = [1,2,3,4,5]
+l1.extend(l2)
+l1
+
+38. Count occurrences of element.
+
+39. Find common elements between two lists.
+
+40. Sum all list elements.
+
+Dictionary / Set / Function / File
+
+41. Count word frequency using dictionary.
+
+42. Merge two dictionaries.
+d1 = {"a": 1, "b": 2}
+d2 = {"c": 3, "d": 4}
+d1.update(d2)
+print(d1)
+43. Remove duplicate values using set.
+
+44. Create function for calculator operations.
+
+45. Write recursive factorial function.
+def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+num = int(input("Enter number: "))
+
+print("Factorial:", factorial(num))
+
+46. Write lambda function for square of number.
+a = lambda x:x**2
+print(a(2))
+
+47. Read data from text file.
+f = open("demo.txt","r")
+data = f.read()
+print(data)
+f.close()
+
+48. Write data into file.
+f = open("demo.txt","w")
+f.write("Hello World")
+f.close(
+
+49. Handle divide-by-zero exception.
+try:
+    a = int(input("enter "))
+    b = int(input("enter "))
+except ZeroDevisionError:
+    print("cannot divide")
+
+50. Build simple student record CRUD program using dictionar

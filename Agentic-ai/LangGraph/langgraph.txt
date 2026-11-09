@@ -1,0 +1,132 @@
+when agent workflow like yes and no use langgraph 
+if tool based chain then use langchain 
+
+langchain works as tool we do @ funtion
+langgraph works as node 
+
+Langgraph componnts 
+1.stategraph  
+state means data in langgraph 
+it create graph using data 
+class is stategraph
+
+START - start node 
+END - end node 
+
+2.TypedDict 
+
+3.node
+funtion is called node in langgraph 
+
+
+4.Edge
+node connect with another node 
+
+ai agent and agentic ai 
+automatic workflow
+but agentic ai have reasoning planning and memory and feedback 
+using feedback it gives better decision 
+
+
+
+loop :-
+retry condition 
+Gate :- condition
+if certain condition like generate ans in 50 lines other wise terminate 
+so if we use loop and at first try it generate 10 lines then after retry it will generate more 
+Task 
+condition maximum loop 3 try 
+if it won't reach 100 words terminate it 
+
+template literal :- variable value dynamic bind = {}
+
+chatboat -> frontend live 
+it should give answer for product 
+get that product from rest api create api product 
+
+same way 
+order api 
+
+user chat boat 
+admin panel :- add product functionality (store at api 
+agent should access all product)
+
+workflow 
+first api 
+
+html admin panel
+
+chatboat access 
+
+admin side order (when click on order return list order pass)
+that order should also see at chatboat 
+
+render/netlifly live 
+
+Why RAG needed? 
+static data
+company policy or private data 
+restricted data document 
+RAG is retrival we need llm for structured output 
+
+step 1 - data stored inside pdf 
+step 2: embedding
+step 2 - chunks 
+step 3 -  every new chunk has previous chunk context 
+(answer will  not be in single chunk k = 3 or 5 means top best 3 chunks and give output )
+step 4 - chromadb (chunks emedding into vectordb)
+
+chunk_size = 500 
+first chunk 500 second 500 till 
+chunk_overlap = 50 
+last 50 char of previous chunks 
+
+3 pdf rag system m
+
+
+
+CREW AI combintion of multiple agent :
+multiple agent system
+where api calling from agent 1 
+db integrate with agent 2 
+
+single agent workflow :
+Langchain - tool - llm - agent - output 
+
+crew agent workflow 
+1.sequential work flow :
+
+2.hierarchical work flow 
+
+where manager / front agent  take decision which agent it should call 
+
+while building crew hierarchical agent system and we need 
+4 agent but still we create one more agent as front agent 
+where front agent will decide which agent to execute 
+
+Terminology:
+
+1.Task :- single agent task to perform
+2.kickoff :- start work from here (agent 1 work done then agent 2 can start work)
+
+3.orchestation architecture :
+using front agent you create hierarchical workflow called orchestation architecture
+
+4.delegation :
+work assign to agent (ex.if prompt about tell me payment of id 97 then front agent assign this work to payment agent it's called delegation)
+5.backstory : 
+prompt template u r my payment assistant this called backstory 
+
+
+sequential workflow:
+
+just like langchain tool we pass agent 
+
+trigger after and before 
+in after 
+existing process complete then trigger then second agent start there work 
+
+in before 
+customer table before inserting record it print msg at second table 
+data will save at msg first in before trigger 
+data will save at customer first in after trigger 

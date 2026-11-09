@@ -1,0 +1,5 @@
+A decision tree predicts the outcome by asking sequence of simple questions
+Root node starting first que 
+Decision nodes : Additional ques based on previous answer
+Branches : The possible outcompe (yes no other value)
+Leaf Node : The final prediction 

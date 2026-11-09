@@ -1,0 +1,200 @@
+dbms is db system is software that used to store,manage and organize and retreive data easily
+SQL - is a structured query lan that used to commnunicate with database
+create table and databases
+diff  
+sql 
+relational db
+no sql non relational db
+
+sql 
+data stored in table
+no sql data stored in document key value grpah
+
+sql 
+used row and col
+no sql flexible structure
+
+sql
+fix schema
+support acid properties strongly
+best for complex queries
+
+no sql - best for large distribution data
+
+sql - Mysql,postgresql,oracle,microsoft
+
+No sql - monogodb,redis
+-------------------------------------
+Types of keys in SQl
+1.primary k
+uniquely identifies each row in table 
+feature
+cannot contain NuLL values
+values must be unique
+one table can have only one primary key 
+
+2.foreign key
+connects two table
+it refers to the primary key of another table
+
+3.candidate key 
+Columns that can uniquely identify rows are called candidate keys
+one of them becomes the primary key 
+
+4.Alternate key
+candidate keys not selected as primary key are alternate keys
+
+5.unique key
+ensures all value are unique
+can contain null value
+
+Sql commands
+perform operations on databases and tables
+1.DDL - Data Defination Lan
+defines db structure
+create alter drop truncate renam
+2.DML - data manipulation lan
+used to manipulate data inside tables
+insert update delete
+3.DQL -  data query lan
+retrieves data from table 
+select
+4.DCL - data control lan
+used for permissions and security
+GRant- gives permission
+Revoke - removes permission
+5.TCL - transaction control lan
+used to manage transcations
+commit - saves changes permanently
+Rollback - undoes changes
+savepoint - creates checkpoint 
+
+delete - deletes selected row
+truncate - delete all rows but table structure remains
+truncate make table empty then why still it used 
+-> table can again use to fill data
+truncate table student;
+drop - delete entire table
+
+Operators:
+= != > < >= <=
+And or Not bitwise like not null in
+
+1. limit
+LIMIT is used to restrict the number of rows returned
+2.Distinct
+Distinct removes duplicate values
+
+3.order by 
+sorts data
+asc default
+order by Marks desc;
+
+4.gropu by
+groups rows having same values
+mostly used with aggregate function
+
+where filters rows
+used before group by
+having filters groups 
+used after group by
+
+
+contraints in sql
+COnstraints are rules applied on table columns to control data and maintain accuracy and intergrity
+
+types:
+not null - prevents null values
+unique
+primary key 
+foregin key 
+check 
+default 
+auto_increment
+
+Joins:
+combine data from multiple tables using related column
+inner join - matching records only 
+left join - all left table records + matching right
+right join - all right table records + matching left
+full join - all records from both tables
+cross join - cartesion product table1 = 2 table2 = 3 = result 6 rows
+self join - join table with it self
+
+select s.name,c.course
+from student as s
+left join course as c
+on s.sid = c.sid
+
+Index i:
+An Index is used to make data searching fast
+create index index_name
+on student(name);
+type
+single
+composite
+uniquec
+clusterd - sorts acutal table data
+non - clusterd inde
+
+View:
+A View is a virtual table created from one or more tables using Sql query
+it does not store data separately
+it shows data from original tables
+
+why use view:
+simple complex queries hide sensitive data improve security show only required columns
+create view student_view as 
+select name,marks
+from students;
+
+select * from student_view;
+
+Procedure:
+A Stored Procedure is a collection of sql statements stored in db that can be executed whenever needed
+like function
+it helps reuse sql code agian 
+create procedure procedure_name
+as 
+begin 
+sql statements
+end;
+
+call Procedure
+call procedure_name
+
+Trigger:
+A Trigger is a special stored procedure that executes automatically when a specific event occurs on a table
+create trigger student_insert
+after insert
+on student
+for each row
+begin 
+insert into log_table1
+values('new student added');
+end;
+
+Transaction in sql:
+A Transaction is a group of sql operations executed as single unit
+either 
+all operation succed
+or 
+all operation fail
+
+Normalization
+it is the process of organizing data in a DB
+1NF -
+atomic values only 
+no multiple value in one column
+2NF
+must be 1nf
+remove partial dependency
+non-key attribute should depend on full primary key 
+3NF
+must be 2nf
+remove transitive dependency
+non-key attribute should not depend on another non-key attribute
+BCNF:
+stornger version of 3nf
+every determinant must be candidate key
+

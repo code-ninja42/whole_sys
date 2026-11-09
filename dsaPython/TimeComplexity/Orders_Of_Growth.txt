@@ -1,0 +1,92 @@
+'''
+Goal
+want to evaluate 
+program's efficiency when input is very big
+want to express the growth of program's run time as input size grows
+focus on worse case scenario too
+we don't need exact formula we just need type of relationship e.x. time input relationship varies
+we'll look at the largest factor at the run time(which section will take the longest to run? single loop and nested loop focus on nested loop)
+
+Big oh o() '''
+
+counting order of growth
+def fact_inter(n):
+    answer = 1
+    while n > 1:
+        answer *= n # answer = answer * n
+        n -= 1
+    return answer
+#outer loop operation 1
+#inner 5 n> 1 = 1 
+# answer *= n , * 1 = 1 total 2
+# n -= 1 , - 1 = 1 total 2
+# 5 
+Equaltion = 1 + 5n where n = input
+counting O(n)
+remove additive constant = 1
+5n
+remove  multiplicate constant = 5 
+big Oh time complexity o(n) -> linear
+means time and relationship are in linear if input increase time increse 
+
+So the idea is simple
+1.
+n^2 + 2n + 2
+means 2n = 2 operation inside loop
+n^2 = nested loop
+2  = outside loop 2 operations
+
+
+n^2 + n  now we will look at the largest constant in run time(nested loop and single loop remvoe single)
+so n^2 
+= O(n^2)
+quadratic relationship
+input 2 then time 4
+input 8 then time 16
+
+2.
+n^2 + 100000n + 3^1000
+O(n^2)
+
+3.
+log(n) + n + 4
+remove log n it small
+O(n)
+
+4.
+0.0001*n*log(n) + 300n
+n*log(n) + 300n
+O(n*lon(n))
+
+5.
+2n^30 + 3^n
+
+3^n greater than n^30 
+O(3^n)
+
+Types of Orders of growth
+1.constant = time taken by program does not depend on input (ex index faching from list etc) 
+2.linaer = ex linear search list lenth increase time increase 
+3.quadratic = input double time 4x(quadruple)
+not good
+ex .nested loop ,bubble sort,sorting algortihm
+4.logairthmic 
+input 10 times increase output -> 1 to increase
+inp -> 10 100 1000
+time -> 1 2  3 
+2 base 
+ 2 4 8 16 
+ 1 2 4 8 
+best 
+ex.binary search
+5.n log 
+merge sort quick sort 
+not best than linear
+better than quadratic
+n > nlogn > n^2
+
+6.exponential
+worst 
+input -> 1 incr
+output -> multiple incr
+opposite of n log  

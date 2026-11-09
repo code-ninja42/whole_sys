@@ -1,0 +1,230 @@
+DL Fundamentals 
+What is Deep Learning?
+AI vs ML vs Deep Learning
+Neural Network
+Artificial Neuron
+Input layer, hidden layer, output layer
+Weights and bias
+Forward propagation
+Activation functions
+Sigmoid
+Tanh
+ReLU
+Leaky ReLU
+Softmax
+Loss functions
+MSE
+Binary Cross-Entropy
+Categorical Cross-Entropy
+Epoch
+Batch
+Iteration
+Learning rate
+
+
+Forward & Backpropagation :- 
+ou should understand this properly.
+
+Forward propagation
+Prediction
+Loss calculation
+Backpropagation
+Chain rule
+Gradient
+Gradient Descent
+Weight update
+Why gradients are needed
+Vanishing gradient
+Exploding gradient
+
+
+Optimization :- 
+Very important for interviews.
+
+Gradient Descent
+Batch Gradient Descent
+Stochastic Gradient Descent
+Mini-batch Gradient Descent
+Optimizers
+SGD
+Momentum
+AdaGrad
+RMSProp
+Adam ⭐
+AdamW
+
+
+Overfitting & Regularization :- 
+Overfitting
+Underfitting
+Bias-variance
+L1 regularization
+L2 regularization
+Dropout ⭐
+Early stopping
+Data augmentation
+Batch normalization
+
+
+CNN :- 
+CNN architecture
+Convolution
+Filter/kernel
+Feature map
+Stride
+Padding
+Pooling
+Max pooling
+Average pooling
+Flattening
+Fully connected layer
+CNN workflow
+
+
+RNN :- 
+For sequential data.
+
+What is RNN?
+Sequential data
+Hidden state
+Recurrent connection
+RNN architecture
+Forward propagation through time
+Backpropagation Through Time (BPTT)
+Vanishing gradient problem
+Exploding gradient problem
+
+
+LSTM :-
+Why LSTM was introduced
+Cell state
+Hidden state
+Forget gate
+Input gate
+Output gate
+Candidate cell state
+
+
+GRU :-
+Learn after LSTM.
+
+What is GRU?
+Update gate
+Reset gate
+Hidden state
+GRU vs LSTM
+Advantages/disadvantages
+
+
+
+Attention :-
+Why attention was introduced
+Query
+Key
+Value
+Attention score
+Attention weights
+Weighted sum
+Self-attention
+Cross-attention
+
+
+
+Transformer :- 
+Transformer architecture
+Encoder
+Decoder
+Self-attention
+Multi-head attention
+Query, Key, Value
+Positional encoding
+Feed-forward network
+Residual connection
+Layer normalization
+Masked self-attention
+
+
+
+NLP + DL :- 
+Since you're also preparing AI/Agentic AI, learn:
+
+Tokenization
+Vocabulary
+One-hot encoding
+Word embeddings
+Word2Vec
+CBOW 
+Skip-gram
+Embedding layer
+RNN for NLP
+LSTM for NLP
+Attention
+Transformer
+
+
+
+Transfer Learning :- 
+What is transfer learning?
+Pre-trained model
+Feature extraction
+Fine-tuning
+Freezing layers
+Unfreezing layers
+
+Examples:
+
+ResNet
+VGG
+BERT
+GPT
+
+
+Generative AI :- 
+Generative AI
+LLM
+Foundation model
+Pretraining
+Fine-tuning
+Instruction tuning
+RLHF
+Prompting
+Context window
+Temperature
+Tokens
+Embeddings
+RAG
+Vector database
+
+
+
+
+Autoencoders:- 
+Encoder
+Latent representation
+Decoder
+Reconstruction
+Reconstruction loss
+Denoising autoencoder
+Variational Autoencoder (VAE)
+
+
+
+
+Practical DL:- 
+TensorFlow
+Keras
+PyTorch
+Sequential
+Dense layers
+CNN layers
+RNN/LSTM/GRU layers
+Optimizer selection
+Loss selection
+Training
+Validation
+Prediction
+Model saving/loading
+
+
+
+

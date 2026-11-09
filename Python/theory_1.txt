@@ -1,0 +1,330 @@
+class - collection of data types,variable,method and constructor
+obj - 
+obj vs variable
+primitive - variable - sine val
+non primitive - object - multi val 
+method vs function
+func inside class called method
+func outside class called function
+func - call by name
+method - call by class obj 
+len(f) - func
+f.append - method
+
+
+class and construct 
+A constructor is a special method that runs when you create an object. It is commonly used to initialize the object's data.
+
+In Python, __init__() is the initializer method often called the constructor.
+both name same 
+1 class 1 obj py 
+method vs construct
+method need to call using self
+construct automatic
+construct same name as class - only 1 const per class
+
+without user intr - construct  - nothing return 
+user event type code - method - return
+
+
+encap - data wraping
+
+. Encapsulation
+
+Encapsulation means combining data and the methods that work on that data inside one class. It also helps control how the data is accessed or changed
+wrap unwrap concept - oops by default
+encap rule 1.- all variable - private
+2.setter and getter method compul
+why encap - model class or bean class 
+db manage encap 
+model  - db 
+view  - frontend
+controller - python
+
+inheritance - child can use the functionality of parent class
+code reusebility 
+code optimization - less code 
+
+1.single - single parent
+2.multiple - 1 child multiple parent
+3.multilevel - 1->2 -> 3 
+4.hierarchy - reverse of multiple 1 parent andmultiple child
+5.hybrid - combination of any 2 inheritance
+
+polymorphism - one interface and multiple implementation
+method overloading -
+multiple method inside class 
+method name same parameter diff 
+method overriding
+method name and parameter both same 
+
+method same how to check - > data type and num of parameter
+
+keyword:-
+self - current class obj refer
+super - parent class obj refer
+
+abstraction - hiding important data showing only 
+collection of abstract class and abstract method
+ABC - abstract class
+@abstractmethod - abstract method
+def method_name
+
+normal method vs abstract method
+normal method have name and body - code
+abstract method have only name no body - pass
+
+normal method declare in normal class and abstract class
+for abstract method compul abstract class 
+
+abstract class parent class then we'll inherit in normal child class 
+normal class has responsibility to write code 
+and abstract class has responsibility to handle that sensitive code obj
+
+
+
+Import ABC and abstractmethod from abc.
+
+Make the parent class inherit from ABC.
+
+Mark the abstract method with @abstractmethod.
+
+The abstract method can have no implementation, often written with pass.
+
+A child class must implement the abstract method before you can create an object of that child class.
+
+Example
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def sound(self):
+        pass
+
+class Dog(Animal):
+    def sound(self):
+        print("Bark")
+
+d = Dog()
+d.sound()
+Exception -> 
+abnormal condition which hamper normal flow condition of code
+error  - whole code break nothing output
+exception - output till when exception occur
+mostly exception occur in third party integration e.g -> python to mysql
+try - block of code that might throw exception except/catch- msg exception finally - always exceute optional
+db.close
+
+
+Class - > 
+class is blueprint template for creating objects
+it collection of data types,varible,method and constructor
+
+obj - it is instance of class
+access class properties
+
+variable - primitive data type stored
+object - non primitive data types store
+
+method vs function
+method - func inside class called
+fun -  func outside class called
+method - call by class obj
+fun - call by func name 
+
+class constructor
+constructor is special method of class it is automatically called
+when object created
+class and constructor both have same name 
+1 class 1 construcor
+constructor return nothing
+#constructor = __init__
+
+method vs construct
+constructor same name as class
+method can be diff
+1 constuct
+multiple method
+const automatic call 
+method need to call self
+
+Encapsulation
+wrapping data and methods together inside one class and controlling direct access to data
+called model or bean class 
+db manage using encap 
+encapulation rule 
+1.all variable private
+2. setter and getter use
+class Student:
+	def __init__(self):
+		self.__marks = 0
+	def set_marks(self,m):
+		self.__marks = m
+	def get_marks(self):
+		return self.__marks
+s1 = Student()
+s1.set_marks(95)
+print(s1.get_marks)
+
+Inheritance - child class access properties and methods of parent class
+code reusability
+code optimization
+1.single - one child one parent
+2.multiple- one child multiple parent class
+3.multilevel - inheritance chain continues level by level
+4.Hierarchical inheritance - multiple child class inheritance one parent class
+5.Hybrid - Combination of two or more inheritance type
+
+
+Polymorphism - one interface many implement
+method overloading
+method name same parameter diff
+method overring 
+method name , parameter both same 
+
+
+abstraction - hiding important info 
+collection of abstract class and abstract method
+ABC - abstract class
+@abstractmethod - abstract method 
+def method_name
+
+normal method vs abstract method
+normal method has name and body
+abstract method has only name no body
+normal method can be declare in normal or abstract class
+while abstract method in abstract class
+normal class has responsibility to write code
+and abstract class has responsibility to handle that sensitive code
+
+Exception
+abnormal condition which hamper normal flow of code
+Excepion -> can be handle
+output till when exception
+Error - can solve
+no output whole code break 
+mostly exception occur in third party integration
+try - the block of code which might throw exception
+except - handle the exception print msg
+finally - always execute database connection close
+
+
+
+
+what is api ? 
+application programming interface client side request to server side 
+server side response backe to client side 
+client side bridge server side  
+before api sql used 
+main problem in sql lan dependent
+
+api lang independent  - can call other lan e.g.nodejs
+secure - other party will not access code just functionality
+api -  monolethic architecure 
+
+adv version micro service 
+same as api just architecure change 
+-multiple DB an multiple server 
+web client used in integrat for micro service
+so disadv of api benefit of micro service:
+server crash in api 
+
+2 types 
+Rest - Representation state transfer
+no protocol follow 
+low bandwidth call - (low internet speed)
+compare to soap secure less
+data stored formate - json xml text xhtml 
+mostly json - key and value 
+Soap - Simple Object Access Protocol
+protocol follow - rules 
+high bandwidth
+high secure
+xml formate
+extensible markup lan - tag based <name>jack</name>
+payment login credential 
+Api method :
+1.get - data fetching (select query type)
+2.post - data insert
+3.put - update /edit 
+4.patch - update / edit -single data updation
+5.delete - delete 
+
+postman - to check api test 
+python - framework - fastapi , flask, django 
+framework / lib / module 
+
+framework diff lib 
+lib - 1 functionality provide 
+light weight - less memory occupy 
+never follow mvc pattern 
+main diff -> lib can be manage by developer
+framework - multiple functionality 
+heavy weight
+follow mvc pattern
+framework manage developer
+
+uvicorn - server 
+anotation - 
+fastapi 
+pydantic
+Basemodel
+app = Fastapi()
+Student = {}
+class Student(Basemodel):
+	id: int
+	name : str 
+	age : int 
+	course : str 
+@app.get("/")
+student running
+@app.get("/students")
+return student 
+@app.get("/students/{student_id}")
+return id 
+
+@app.patch 
+@app.put 
+@post
+post - 200OK status code of post
+get - 200 Ok 
+delete - 200 OK 
+put - 200 OK 
+patch - 
+
+monolethic Architecure - Entire application is built as one single large system 
+everything connected together: login payement product orders all inside one project
+microservices Architecure
+application divided into small independent services
+Each service does one job only 
+they communicate using APIs
+
+Framwork 
+provides structure and rules for building application 
+it controls the flow
+
+Library
+A library is a collection of reusable functions 
+developer control when to use it
+
+orm 
+odm 
+
+
+langchain
+prompt - agent - api call - llm - decorate
+langgraph
+main agent - decision - langgraph
+
+RAG - based chat boat 
+static - company policy - pdf - text into vector db - multiple chunk
+
+mockAPI 
+api - 
+pip install langchain langgraph google genai request python - .env 
+env - environment - secure data add 
+
+join view index normalization window cte sub query group having aggregatation procedure trigrr 
+chat boat 
+python api agent theory 
+

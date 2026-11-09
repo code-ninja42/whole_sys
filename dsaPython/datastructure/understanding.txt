@@ -1,0 +1,11 @@
+Linear :- data one by one 
+array,linkedlist,stacks,queue,hashing
+Non Linear :- Tree,Graph 
+
+Array : it is linear ds which store multiple item of same data type 
+at continous memory location 
+
+disadv :-
+fixs size 
+homogenous (same datatypes) lack of flexibility
+

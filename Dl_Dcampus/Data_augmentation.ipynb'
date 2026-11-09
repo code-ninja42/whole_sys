@@ -1,0 +1,6 @@
+Data augmentation is the process of creating new training samples from existing data by applying small transformations, while keeping the original meaning or label.
+Rotating
+Flipping
+Cropping
+Zooming
+Changing brightness

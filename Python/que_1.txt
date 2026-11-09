@@ -1,0 +1,117 @@
+purpose of the __dict__ attribute in python
+purpose of the enumerate() function in python
+variable - a location in memory to store data
+
+//  operator floor division round down to the nearest integer 5//2 - 2
+
+what isinstance
+scope of variable
+
+
+window function ctl sql api python 
+chatboat
+langchain langgraph crew ai 
+RAG
+
+sklearn pandas fastapi vs
+
+reference variable 
+reference variables hold the objects 
+
+Encapsulation 
+
+static variable vs instance variable
+
+class Relationship
+Aggregation(has - a relation)
+metaclass
+
+inheritance
+class User:
+    def __init__(self):
+    self.name = 'jack'
+    def login(self):
+        print('login')
+class Student(User):
+    #no constructor
+    def enroll(self):
+        print('enroll into the course')
+s1 = Student()
+s1.login()
+s1.name
+
+what gets inheritance?
+constructor
+non private attributes
+non private methods
+
+Method Overriding - (method same name same parameter)parent and child class same method name then child class method execute
+class phone:
+    constructor
+    def buy(self)
+class smartphone(phone):
+    def buy
+obj = smartphone()
+
+super constructor:- child constructor c
+
+Polymorphism
+method Overriding
+method overloading - in a single class same method name diff parameter
+class shape:
+    def area(self,raduis):
+        return 
+    def area(self,l,b):
+        return l*b
+
+operator overloading :- 'hello' + 'world' = helloworld
+                        4 + 5 = 9 
+                        [1,2,3] + [4,5] = [1,2,3,4,5]
+                        operator same but behave diff        
+
+
+Abstraction
+inheritance ABC class
+atleast abstract method -> no code no implementation 
+concreate method - our normal method
+import abc import ABC,abstractmethod
+class BankApp(ABC):
+    
+    def database(self):
+        print('connected to database')
+    @abstractmethod
+    def security(self):
+        pass
+    
+class app(BankApp):
+    def login(self):
+        print('login into mobile')
+    def security(self):
+        print('mobile security')   
+
+===================================-------------------
+What do you mean by List Comprehension in Python?
+List Comprehension are a short and elegant way to define and create new lists based on existing lists
+l = [5,2,3]
+l1 = [i for i in l1 if i%2==0]
+
+list(map(lambda x:x**2,l1))
+
+tuple(filter(lambda x : (x%3 == 0),t1))
+
+diff between loc() and iloc()
+
+loc() uses row or column labels to select and slice data from a dataframe
+row index in number col - name
+
+iloc() uses integer index to select specific rows and columns
+index in number both row cols
+
+
+why not logistic classification?
+
+
+give an example when is median more effective than mean 
+if your data has outlier than you should prefer median 
+what is lazy learning algorithm
+parametric vs non parametric algorithm

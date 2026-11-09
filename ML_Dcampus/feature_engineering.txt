@@ -1,0 +1,15 @@
+Feature engineering is the process of using domain knowledge to extract features from raw 
+dat.these features can be used to improve the performance of machine learning algor
+
+sub part 
+1)feature transform
+1a - handling missing imputation
+1b - handling categorical features (one-hot encoding)
+1c - outlier detection 
+1d - feature scaling
+2)feature construction:-
+manually creating new feature
+3)feature selection:-
+dropping feature which are not important for ml algorithm
+4)feature extraction:-
+programically creating new feature 

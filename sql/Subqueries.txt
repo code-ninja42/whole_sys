@@ -1,0 +1,56 @@
+Subquery :- 
+query within another query
+Find highest ranking movie
+select * from movies 
+where score = (select max(score) from movies)
+first inner query execute then outer
+
+===================================================
+independent Subquery - scaler Subquery
+1.find the movie with highest profit (vs order by)
+select * from movies
+where (gross-budget) = (select(max(gross-budget) from movies))
+ 2nd way:-
+SELECT * from movies 
+order by (gross-budget) desc limit 1;
+
+which is faster Subquery or oder by 
+order by will be faster in big dataset order by use indexing concept
+but without indexing time complexity will be faster in Subquery
+
+que 2.find how many movies have a rating > the avg of all the movie rating(find the count of above avg rating)
+SELECT count(*) from movies
+where score > (
+SELECT avg(score) from movies)
+
+que 3.Find the highest rated movie of 2000
+--SELECT * from movies where year = 2000 and score =(SELECT max(score) from movies
+--where year = 2000)
+
+que 4: Find the highest rated movie among all movies whose number of votes are > the dataset avg votes
+--subquery 
+select * from movies 
+where score = (
+select max(score) from movies where votes(
+select avg(votes) from movies))
+
+
+
+index row scan 
+not whole table scan
+storage engine use innodb and myislam
+
+
+orm architecture 
+1.connection provider
+2.session
+2.session factory 
+4.transaction 
+5.transaction factory
+
+data migration adv 
+caching :- will not hit server save query for same action
+
+
+
+

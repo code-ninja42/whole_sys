@@ -1,0 +1,102 @@
+- negative value to NaN then fillna
+ex : df['Age'] = df['Age'].replace(-2,np.NaN)
+#remove rows with null missing value
+ex : df.dropna()
+Remove Rows Only If ALL Values Are NULL
+df.dropna(how='all')
+column 
+df.dropna(axis=1)
+#fillna particular
+df['val'] = df['val'].fillna(0)
+
+check duplicate count df:-
+df.duplicated().sum()
+show duplicates:-
+df[df.duplicated()]
+Remove duplicates:-
+df.drop_duplicates()
+Remove duplicate from specific columns
+df.drop_duplicates(subset=['col'])
+
+basic info:-
+df.describe()
+df.info()
+df.shape
+df.columns
+df.sample(5)
+(df.isnull().sum() / len(df)) * 100
+
+column operations rename:-
+df.rename(columns={'old':'new'})
+df.drop(columns=['Name'])
+df['new_col'] = df['Age']*2
+
+sorting:-
+df.sort_values('age')
+df.sort_values('age',ascending = False)
+
+groupby:-
+df.groupby('age')['val'].mean()
+df.groupby('age')['val'].agg(['mean','max'])
+
+Pivot Table:-
+pd.pivot_table(
+    df,
+    values = 'age'
+    index = '',
+    columns='',
+    aggfunc = 'mean'
+)
+String Cleaning:-
+df['name'].str.split()
+df['Name'].str.replace('.','')
+multiple value replace
+df['Gender'] = df['Gender].replace({
+    'M':'Male',
+    'F':'Female'
+})
+
+Datetime:-
+df['date'] = pd.to_datetime(df['Date'])
+df['year'] = df['date'].dt.year
+
+Merge:-
+pd.merge(df1,df2,on='id')
+pd.concat([df1,df2])
+
+Value counts:-
+df['age'].value_counts() #NaN not counted
+df['age'].value_counts(dropna=False) 
+Now missing values are also counted
+df['city'].nunique()
+
+Apply Function:-
+df['age'].apply(lambda x: x+1)
+
+#export cleaned data
+df.to_csv("cleaned_data.csv",index=False)
+
+
+Bar plot:-
+category comparison
+male vs Female
+df['Gender'].value_counts().plot(kind='bar')
+
+Histogram
+distribution and frequency
+age distribution
+plt.hist(df['Age'])
+
+Box plot 
+outlier detection
+plt.boxplot(df['salary'])
+
+Correlation 
+df.corr(numeric_only=True)
+Heatmap
+using seaborn
+import seaborn as sns
+
+sns.heatmap(df.corr(numeric_only=True), annot=True)
+
+plt.show()

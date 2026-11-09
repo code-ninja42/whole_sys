@@ -1,0 +1,371 @@
+DL workflow 
+
+input -> neurons - neurons calculete weight + bias -> hidden layer -> multiple hl -> output 
+in neurons takes input and multiples them by weights adds a bias and applies an activation function
+z = w1x1+w2x2 + b
+then output = activation(z)
+
+weights :- how important is this input
+bias :- addtional adjustable value 
+
+hidden layer :- contain multiple neurons
+each neurons have own weights and bias 
+
+output -> 
+calucalte loss function
+loss function is actual value vs prediction value 
+main goal is to minimize loss function 
+
+it use adam optimizer to do backword propogation 
+the model asks :- which weights and biases contributed to this error and by how much 
+it calucalte gradient-> if i change this weight slightly what will the loss change
+
+then final output
+
+
+NLP 
+it is sequence process used human lan and convert raw text into useful information or predictions
+1.Text collection
+2.Text cleaning
+html tags
+unwanted special symbols
+punctuation
+3.tokenization
+break text into smaller units called tokens
+4.stopword removal 
+5.stemming
+convert words toward their base form
+6.text representaion
+machine directly can't understand text so convert text into numerical representations
+Bag or words
+Tk-IDF
+word2vec
+
+bag of words :- return list of word with occuracnce
+if sen like [ i love cake cozz cake nice]
+[ 1 1 2 1 1] 
+ignore the order order
+2.high dimensionality
+3.if sen large and most values are not present it add zero 
+sparse vector make
+7.output
+
+N-Grams :- we can improve BoW by considering groups of words
+Unigram
+BigramTrigram
+
+TF-IDF
+term frequency-inverse document frequency
+
+TF - Term Frequency
+how frequently does a word occure
+IDF
+how rare is this word across the entire collection of documents
+
+
+
+Word Embedding
+Word2Vec
+instead of 0 or 1 it gives the weight to word 
+correlation word pattern
+memory wastage problem solcw
+
+CBOW - continous BOW 
+predict the target word from surronding words
+
+Skip-gram
+Do the opposite
+Given a word predict surronding words
+
+FastText 
+considering also subword information 
+
+
+ANN :- input hidden state - weight + bias ->output 
+
+CNN - Convolutional Neural Network 
+
+1.input image 
+before passing to convolution layer we do 
+convert into 0 to 1 as pixel color RGB 
+each pixel image in 0 to 255 intead of 
+we might scale value to 
+0 to 1 
+
+2. convolution layer
+detect features in the image 
+Early layer:-
+detect edges
+corners
+simple patterns 
+Middle layer:-
+textures shapes part of objects
+Deep layers
+eyes ears faces objects
+
+3.Filter/kernal layer
+uses a small matrices and move across  the image
+start from top-most left side and cover entire image
+
+CNN perform element-wise multiplication
+Suppose part of the image is:
+
+[ 1  2  3 ]
+[ 4  5  6 ]
+[ 7  8  9 ]
+
+And the kernel is:
+
+[ 1  0  1 ]
+[ 0  1  0 ]
+[ 1  0  1 ]
+
+4.collection of all these calculated multiply values form the
+Feature map
+
+5.Relu Activation 
+	Relu(x) = max(0,x)
+6.Pooling
+apply pooling to reduce the size of feature map 
+2x2 max pooling
+[1 3]
+[2 5] 
+= 5 maximum
+
+7.Flatten 
+after the final convolution/pooling layer we have 2d or 3d features
+we convert in into 1d vector
+
+8.fully connected layer
+the faltten values are given to fully connected layer
+ann 
+
+
+
+RNN - Recurrent neural network
+sequential data where order of information matters like stock data time series
+
+rnn cell receives two things
+current input x1
+previous hidden state
+and produces
+new hidden state
+
+tanh = (wx*x1 + wh*ht-1+b)
+
+ht-1 = Previous hidden state
+
+tanh = -1 and +1
+
+Types of RNN 
+1one to one 2.one to many 3 many to one 4 many to many 
+
+
+Vanishing Gradient Problem
+during backword propogation gradient are repeatedly multiplied 
+if values are smaller than 1 gradient become smaller and smaller
+
+i grew up in india i moved to usa for computer scinec still i speak fluent hindi
+to understand hindi the model may need previos information
+but RNN may forgot the earlier information
+
+
+
+Exploding Gradient Problem;
+
+oppsite of vanishing
+the value being multiplied are greater than 1 the gradient becomes larger and larger
+causing unstable training and weights are large
+
+
+
+LSTM 
+to solve vanishing gradient and exploding gradient problem
+LSTM uses cells and gates (long-short term memory)
+
+Hidden state ht:- 
+carries info that is used as the current output
+short-term represntation
+
+cell state ct
+acts like longer term memory highway
+internal memory
+
+
+gate 
+gate is basically mechnism which controls information
+
+forget gate :-
+decides what info from the previos cell state should be forgotten
+
+input gate :-
+what new information should i store in the cell state?
+
+Update celll state:-
+take the old memory and decide what to keep
+take the new candidate info and decide what to add
+
+Output gate:-
+what information from cell state to current hidden state
+
+Problem in lstm
+:- time complexity
+:- training time incr
+:- slower more complex
+
+
+
+GRU
+2 gates and 1 state
+update gate :- how much of the previous info should model keep and how much new info should model use
+Reset Gate:-
+how much of the previous hidden state should be considered when creating new candidat information
+
+
+
+Transformer :- 
+uses self- attention
+instead of passing info from previos step , each token can directly look at other relevant tokens
+1.tokenization
+2.add token IDs
+3.EMbedding
+
+Attention:
+which other tokens should i focus while understanding the current token
+
+Self-Attention:-
+Self-Attention is attention where the tokens come from the same sequence
+
+at self-attention
+query:- what information am i looking for
+key :- what information do machine contain
+value :- what actual information should machine provide
+
+Encoder = understands the input 
+Decoder = generates the output
+
+
+
+VAE - Variational Autoencoder
+combine patterns and generate new similar data
+
+encoder :- 
+convert user input image into compressed pixel and that 
+compressed size store in vectore
+this called latent vector 
+
+decoder :- 
+work on latent vector and generate image
+
+at initial stage vectors are not generated then encoder and decoder space called latent space
+
+VAE used in :- crime at criminal identify 
+
+
+
+authentication - valid user
+authorization - role based access
+
+1.session base email and password
+2.bearer token based authentication
+after enter ing email and password at server side token will be generated
+we verify token at server side 
+3.JWT - json web token jwt compare whole token 
+unlike bearer skips 7 
+4.multi factor authentication
+gmail and phone 
+
+
+
+
+MCP - model context protocol is a standard way that allows an
+AI model to connect with external tools structured way
+
+user -> LLM -> mcp ClIent -> mcp Server -> Tool / Resource
+
+Host 
+The AI application
+Mcp client
+maintain connection between the host and an mcp server
+mcp server
+Provides tools, resources, or prompts to the AI 
+Tools 
+actions the AI can request
+
+
+
+thread life cycle
+Thread :- sequence of execution withing a process
+1.born phase/new phase:
+make your process async cozz default was sync
+2.runnable phase/ready:
+ready to perform task 
+but not running
+3.running phase:
+actual task execute
+4.wait/block 
+when agent running order task according to your prompt
+now customer gives new prompt product 
+then order will go on wait phase 
+then previous request goes into wait phase if work is done 
+destory - destroyphase 
+
+
+
+LLM :- 
+AI trained on a very large amount of text so that it can understand and generate human-like lan
+
+context window:- amount of input the model can consider at once 
+
+Langchain :
+it is a framework for buliding llm 
+instead of directly calling an llm it helps you connect with LLM with
+prompts
+api tools
+db 
+documents
+memory
+
+User -> Prompt-> Langchain -> llm -> response
+
+1.Chain :
+sequence of step where the output of one step goes into next
+2.Agent 
+agent can decide which tool to use and what steps to take based on user's request
+3.Tools
+tools are functions that an agent can use
+4.prompt template
+structured way instruction p
+5.output parser
+an output parser helps convert the response into a structured format
+
+
+RAG
+it allows the LLM to retrieve relavant info from external document before generating an answer.
+embedding:-
+1.Documents
+your knowlegde source can be pdg website db or a company documents
+2.document loader
+3.text splitier
+divided into smaller chunks
+4.embedding
+each chunk is converted into a numerical vector
+5.vector db 
+embedding stored  ex chroma
+
+when user asked que 
+que is also converted into an embedding
+then the retriever searches the vector db for chunks that are semantically similar to the quetion
+
+Langchain + RAG 
+document -> load -> split into chunks -> create embedding -> vector DB
+ -> user que -> Retriever -> Relavant chunks -> prompt + Context -> LLM -> answer
+
+
+
+LangGraph 
+LangGraph = Nodes + Edges + State 
+
+
+Hallucination = when llm generate false information
+Groundedness = how well the model's answer is supported by the given context

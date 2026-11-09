@@ -1,0 +1,39 @@
+Why numpy array instead of python list?
+numpy array are faster,consume less memory,support vectorized operations 
+(vectorized operations means performing operations on an entire array at once without writing loops), provide built-in mathematical functions
+
+np.linspace and np.logspace
+
+np.eye and np.identity
+
+np.rand and np.randn ,np.random.randint, np.choice,np.seed
+
+ravel and flatten
+
+np.resize and np.reshape
+
+stacking and concatenation
+
+split and array_split
+
+copy and view 
+
+
+=============================================================================================
+Things to remeber
+l1 = [1,2,3,4]
+l2 = [5,6,7,8]
+print(l1+l2) will return concate list 
+
+to add element
+l3 = []
+for i in range(len(l1)):
+    l3.append(l1[i]+l2[i])
+print(l3)
+
+import numpy as np 
+a = np.arange(1,10).reshape(3,3)
+b = np.arange(11,20).reshape(3,3)
+print(a*b) multiplication element wise 
+to do multiplication with linear algebra method use @
+print(a@b)

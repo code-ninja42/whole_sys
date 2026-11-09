@@ -1,0 +1,74 @@
+statistic :- 
+
+population vs sample 
+Descriptive vs Inferential 
+
+Type of Data:- 
+1.categorical
+2.numerical 
+3.discreate vs continous
+
+sampling methods:
+1.simple 
+2.stratified
+3.cluster
+
+2.Descriptive Statistic 
+1.mean median mode
+2.std variance range iqr coefficient of variance
+3.percentiles vs quartiles
+4.skewness
+     positive
+     negative 
+     symmetric distribution
+
+5.kurtosis
+6.outlier and detection 
+7.covariance
+8.correlation:- pearson 
+
+
+3.Probability 
+basic Probability 
+Probability rules 
+Bayes'theorem
+
+Probability distribution
+Bernoulie 
+Binomial 
+Poisson 
+Geometric 
+
+
+4.Continous distributions
+1.uniform 
+2.normal
+
+CLT 
+
+5.Hypothesis Testing 
+1.null
+2.alternative
+3.significance level
+4.p-value
+5.type-1 and type-2 errors
+5.one-failed and two-failed tests
+7.statistical test 
+z-test
+t-test
+chi-square test 
+anova test 
+a/b testing 
+
+
+6.ml 
+linear algebra 
+vector and matrix 
+eigenvalues and Eigenvectors 
+
+Chain Rules 
+Gradients 
+feature scaling:-
+1.standardization
+2.Normalization 
+outlier :- z and iqr 

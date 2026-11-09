@@ -1,0 +1,423 @@
+Statistics Fundamentals — Interview Notes
+1. Population vs Sample
+Population
+
+Definition:
+A population is the complete group of people, objects, or observations that we want to study.
+
+Example:
+A university has 10,000 students, and we want to study the average height of all students.
+
+Population = 10,000 students
+Sample
+
+Definition:
+A sample is a smaller group selected from the population to represent the population in a study.
+
+Example:
+
+Instead of measuring all 10,000 students, we randomly select 500 students and measure their heights.
+
+Population = 10,000 students
+Sample = 500 students
+Why do we use a sample?
+Studying the entire population can be expensive.
+It can take a lot of time.
+A properly selected sample can help us estimate characteristics of the population.
+Interview Answer
+
+Population is the entire group of individuals or observations that we want to study, whereas a sample is a smaller subset selected from that population. We use samples because collecting data from the entire population can be expensive and time-consuming. A representative sample helps us make estimates about the population.
+
+Key Difference
+Population	Sample
+Entire group	Smaller subset
+Usually larger	Usually smaller
+Complete group of interest	Selected from population
+Example: 10,000 students	Example: 500 students
+2. Descriptive vs Inferential Statistics
+
+Statistics can mainly be divided into:
+
+Descriptive Statistics
+Inferential Statistics
+2.1 Descriptive Statistics
+Definition
+
+Descriptive statistics is the process of collecting, organizing, summarizing, and presenting data in a meaningful way.
+
+It describes the data that we already have.
+
+Example
+
+Suppose a teacher has marks of 50 students.
+
+We can:
+
+Calculate the average marks.
+Find the highest and lowest marks.
+Calculate standard deviation.
+Create charts or graphs.
+
+These are examples of descriptive statistics.
+
+Common Techniques
+Mean
+Median
+Mode
+Range
+Variance
+Standard deviation
+Tables
+Charts
+Graphs
+Simple Meaning
+
+Descriptive = Describe or summarize the data we have.
+
+2.2 Inferential Statistics
+Definition
+
+Inferential statistics uses data from a sample to estimate or draw conclusions about a larger population, while considering uncertainty.
+
+Example
+
+A university has 10,000 students.
+
+We randomly select 500 students and calculate their average height.
+
+We can use the sample information to estimate the average height of all 10,000 students.
+
+Common Techniques
+Confidence intervals
+Hypothesis testing
+Z-test
+t-test
+Chi-square test
+ANOVA
+A/B testing
+Simple Meaning
+
+Inferential = Use sample data to make conclusions about a population.
+
+Descriptive vs Inferential
+Descriptive Statistics	Inferential Statistics
+Summarizes data	Draws conclusions
+Describes the data we have	Generalizes from sample to population
+Does not necessarily generalize to a larger population	Uses sample data to make population-level conclusions
+Mean, median, standard deviation	Hypothesis testing, confidence intervals
+Example: Average marks of 50 students	Example: Estimate average marks of all university students
+Easy Way to Remember
+
+Descriptive → What does my data show?
+
+Inferential → What can I conclude about the larger population?
+
+Interview Answer
+
+Descriptive statistics summarizes and presents the data we have using measures such as mean, median, and standard deviation. Inferential statistics uses sample data to make estimates or draw conclusions about a larger population. For example, calculating the average marks of a class is descriptive, while using a sample of students to estimate the average marks of an entire university is inferential.
+
+3. Types of Data
+
+Data is the information that we collect for analysis.
+
+The two main types are:
+
+Categorical Data
+Numerical Data
+
+Numerical data is further divided into:
+
+Discrete Data
+Continuous Data
+3.1 Categorical Data
+Definition
+
+Categorical data represents groups, categories, or labels.
+
+It describes what something is, rather than how much of it there is.
+
+Examples
+Gender → Male, Female, Other
+Blood Group → A, B, AB, O
+Department → IT, HR, Finance
+City → Ahmedabad, Mumbai, Delhi
+Customer Satisfaction → Dissatisfied, Neutral, Satisfied
+Types of Categorical Data
+Nominal
+
+Categories have no natural order.
+
+Examples:
+
+Blood group
+City
+Department
+Gender
+Ordinal
+
+Categories have a meaningful order or ranking.
+
+Examples:
+
+Low → Medium → High
+Poor → Average → Good → Excellent
+Dissatisfied → Neutral → Satisfied
+Simple Meaning
+
+Categorical data = Categories or labels.
+
+3.2 Numerical Data
+Definition
+
+Numerical data represents quantities that can be counted or measured.
+
+Arithmetic operations such as addition and averaging can be meaningful for numerical data.
+
+Examples
+Age → 22 years
+Salary → ₹30,000
+Height → 170 cm
+Weight → 65 kg
+Number of orders → 25
+
+Numerical data is divided into:
+
+Discrete Data
+Continuous Data
+3.3 Discrete Data
+Definition
+
+Discrete data consists of countable and separate values, usually whole numbers.
+
+Examples
+Number of students → 50
+Number of orders → 20
+Number of machine failures → 3
+Number of employees → 100
+
+We cannot normally have:
+
+2.5 students
+3.7 orders
+10.4 employees
+Simple Meaning
+
+Discrete = Counted.
+
+3.4 Continuous Data
+Definition
+
+Continuous data can take any value within a range, including decimal values.
+
+It is usually obtained through measurement.
+
+Examples
+Height → 165.5 cm
+Weight → 62.8 kg
+Temperature → 36.7°C
+Time → 3.45 seconds
+Simple Meaning
+
+Continuous = Measured.
+
+Discrete vs Continuous
+Discrete	Continuous
+Countable	Measurable
+Separate values	Can take any value within a range
+Usually whole numbers	Can contain decimal values
+Number of students	Height
+Number of orders	Weight
+Number of machine failures	Temperature
+Interview Answer — Types of Data
+
+Data is mainly classified into categorical and numerical data. Categorical data represents groups or labels, such as department or blood group. Numerical data represents quantities, such as age, salary, or height. Numerical data is further divided into discrete data, which is countable, and continuous data, which is measurable and can take decimal values.
+
+Interview Answer — Discrete vs Continuous
+
+Discrete data consists of countable, separate values, such as the number of students in a class. Continuous data can take any value within a range, such as a person's height or weight. Discrete data is usually obtained by counting, while continuous data is usually obtained by measuring.
+
+4. Sampling Methods
+Definition of Sampling
+
+Sampling is the process of selecting a smaller group from a population to collect data and study its characteristics.
+
+The three important sampling methods are:
+
+Simple Random Sampling
+Stratified Sampling
+Cluster Sampling
+4.1 Simple Random Sampling
+Definition
+
+Simple random sampling is a method in which every individual in the population has an equal chance of being selected.
+
+Example
+
+A university has 1,000 students.
+
+We need a sample of 100 students.
+
+We assign a unique number to every student and randomly select 100 numbers.
+
+Every student has the same chance of being selected.
+
+Advantages
+Easy to understand.
+Reduces selection bias when properly randomized.
+Simple to analyze.
+Limitation
+
+It can be difficult when the population is very large or geographically distributed.
+
+Simple Meaning
+
+Simple Random = Randomly select individual people/items.
+
+4.2 Stratified Sampling
+Definition
+
+Stratified sampling divides the population into subgroups called strata based on a shared characteristic.
+
+Then, we randomly select individuals from each subgroup.
+
+Example
+
+A university has 1,000 students:
+
+600 Undergraduate students
+300 Postgraduate students
+100 PhD students
+
+We need a sample of 100 students.
+
+Using proportional stratified sampling:
+
+60 Undergraduate students
+30 Postgraduate students
+10 PhD students
+
+Students are randomly selected from each group.
+
+Advantages
+Ensures representation from each subgroup.
+Can improve the precision of estimates.
+Allows comparison between subgroups.
+Limitation
+
+We need information about the population's subgroup membership.
+
+Simple Meaning
+
+Stratified = Divide into groups → randomly select from every group.
+
+4.3 Cluster Sampling
+Definition
+
+Cluster sampling divides the population into natural groups called clusters.
+
+We randomly select some clusters and collect data from the individuals in those selected clusters.
+
+Example
+
+A university has 50 classes with 40 students in each class.
+
+We randomly select 5 classes and survey all students in those 5 classes.
+
+Here:
+
+Each class = Cluster
+Selected classes = Sample
+Students inside selected classes = Surveyed individuals
+Advantages
+Useful when the population is geographically distributed.
+Can reduce cost and time.
+Does not always require a complete list of every individual.
+Limitation
+
+Selected clusters may not represent the entire population well.
+
+Simple Meaning
+
+Cluster = Divide into groups → randomly select some whole groups.
+
+5. Stratified vs Cluster Sampling
+Stratified Sampling	Cluster Sampling
+Population is divided into strata	Population is divided into clusters
+Randomly select individuals from every group	Randomly select some groups
+Every important subgroup is represented	Only selected clusters are included
+Groups are based on a characteristic	Groups are usually natural existing groups
+Example: Select students from every academic level	Example: Select certain classes and survey their students
+Easy Way to Remember
+
+Stratified:
+
+Divide → Select from every group
+
+Cluster:
+
+Divide → Select some groups
+
+6. Important Interview Questions
+Q1. What is the difference between population and sample?
+
+Population is the entire group of individuals or observations that we want to study, whereas a sample is a smaller subset selected from that population. We use samples because collecting data from the entire population can be expensive and time-consuming.
+
+Q2. What is descriptive statistics?
+
+Descriptive statistics summarizes and presents the data we have using measures such as mean, median, and standard deviation.
+
+Q3. What is inferential statistics?
+
+Inferential statistics uses sample data to make estimates or draw conclusions about a larger population while considering uncertainty.
+
+Q4. What is the difference between descriptive and inferential statistics?
+
+Descriptive statistics summarizes the data we have, whereas inferential statistics uses sample data to make conclusions or estimates about a larger population.
+
+Q5. What are the main types of data?
+
+The main types are categorical and numerical data. Numerical data is further divided into discrete and continuous data.
+
+Q6. What is categorical data?
+
+Categorical data represents groups or labels, such as department, blood group, or city.
+
+Q7. What is numerical data?
+
+Numerical data represents quantities that can be counted or measured, such as age, salary, height, or weight.
+
+Q8. What is the difference between discrete and continuous data?
+
+Discrete data is countable and consists of separate values, while continuous data is measurable and can take any value within a range, including decimal values.
+
+Q9. What is simple random sampling?
+
+Simple random sampling selects individuals randomly, where every individual in the population has an equal chance of being selected.
+
+Q10. What is stratified sampling?
+
+Stratified sampling divides the population into subgroups based on a shared characteristic and randomly selects individuals from each subgroup.
+
+Q11. What is cluster sampling?
+
+Cluster sampling divides the population into natural groups, randomly selects some of those groups, and collects data from the selected groups.
+
+Q12. What is the difference between stratified and cluster sampling?
+
+In stratified sampling, we select individuals from every subgroup, whereas in cluster sampling, we randomly select some groups and study the individuals within those selected groups.
+
+Quick Revision
+Topic	One-Line Meaning
+Population	Entire group we want to study
+Sample	Smaller subset of the population
+Descriptive	Summarizes the data
+Inferential	Uses sample to make population-level conclusions
+Categorical	Groups or labels
+Numerical	Quantities
+Discrete	Counted
+Continuous	Measured
+Simple Random	Randomly select individuals
+Stratified	Select individuals from every subgroup
+Cluster	Select some whole groups
+Nominal	Categories without order
+Ordinal	Categories with order

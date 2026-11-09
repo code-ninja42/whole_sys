@@ -1,0 +1,242 @@
+what is ml 
+ml is branch of ai where computers learn patterns from data and make predictions or decision without being explicity programmed for every rule
+what is features
+input columns
+what is target
+output 
+what is model ?
+the algorithm that learn patterns
+life cycle of ml
+1.identify problem 2.data collection 3. eda 4.selecting model 5.train 6.test 7.accuracy validation 8.deployment 9.monitoring
+
+main types of ml models
+1.regression models
+used when output is a continous number 
+e.g. house price predictions
+linear regression
+polynomial regression
+2.classification models
+used when output is categories/classees
+e.g. spam or not spam 
+logistic regression
+decision tree
+random forest
+naive bayes
+svm 
+3.clustering models
+used to group similar data 
+no labeled output
+ex: k-means 
+dbscan 
+hierarchical clustering
+
+Linear regression -> used to predict continous numerical values
+y = mx + c
+where m = slope - how much y changes when x changes
+
+c = intercept - starting value when x = 0
+
+cost function 
+means sqaures error (MSE)
+square errors punishes large errors more
+Mean Absolute Error (MAE)
+measures avg Absolute error
+lower MAE - better model 
+RMSE - 
+most commonly used 
+sqrt of MSE
+
+r2 score 
+1 - perfect 
+0 - bad
+negative - worst
+
+#
+what is overfitting ?
+model perform well on training data but poorly on unseen data
+
+what is underfitting?
+model is too simple and cannot learn patterns properly 
+
+logistic regression
+despite the name 'regression' mainly focus on classification problems
+
+metrics -
+accuracy - correct predictions
+precision - correct positives
+recall - found actual positives
+f1-score - balance precision & recall
+
+random forest = collection of multiple decision tree
+naive bayes = probability - based algorithm using bayes theorem
+svm (support vector machine) - find best boundary separating classees
+
+k-cluster - unsupervised means no labeled output 
+machine finds patterns itself 
+group similar data points into clusters
+
+dbscan - instead of fixed k cluster it groups points based on density 
+
+pickel - built - in python objects into file 
+load them back later
+
+pickle.dump() - save objects while saving dump - wb
+pickle.load() - load object while loading load rb
+
+1.What is Python?
+python is high level - basic eng
+interpreted -  code is executed line by line instead of converting whole code 
+oop 
+simple syntax readability and large library support
+pyc - contains compiled bytecode
+
+platform independent
+large lib support
+used in ai ml web development cyber da automation 
+integration supports 
+garbage collection 
+
+variable - 
+it is named memory location used to store data value in program 
+python is dynamic type - there is no need to declare the data type 
+
+primitive non primitive data type 
+
+operator 
+1.arithmetic - + - */ / % **
+2.comparision ==  !=  >  <  >=  <=
+3.logical and  or  not
+4.assignment =  +=  -=  *=  /=
+5.bitwise &  |  ^  ~  <<  >>
+membership - check presence in squence 
+in not in 
+identity - compare memory location 
+is isnot
+
+heterogeneous lists - list 
+
+List - collection of ordered,mutable item square brackets
+tuple - collection of ordered ,immnutable item parantheses
+set - collection of unorderd, unique item ,mutable  
+dict - collection of key-value pairs where each key is unique 
+none - 
+
+Higher-order functions are functions that can take other functions as arguments
+
+
+RAG - retrieval augmented generation
+is a way to make ai answers more reliable by combining searching for relevant info rathern then generating a response
+it first finds useful data from external sources like documents or databases and then uses it to give a better answers
+companys policity -> vector db - > chunks 
+
+crew ai 
+multiple agent 
+it is open-source framwork used to autonomous ai agents so they can collborate as team
+rathern than relying on a single ai promot to handle everything it break down complex tasks and assign them to specicialized agent 
+
+langchain
+langchain is an open-source framework that simplifies building application useing large langual model 
+it helps developes connect llm spi db tools agents prompts
+
+User Input
+   ↓
+Prompt Template
+   ↓
+LLM (GPT/Gemini)
+   ↓
+Agent decides tool
+   ↓
+API/Tool Call
+   ↓
+Final Response
+
+langraph 
+framwork built on top of langchain used to create multi agent and complex ai workflow using graphs
+
+main agent - decision
+for complex system 
+nodes and edges
+
+what is api 
+application programming interface
+is a way for two software application to commnicate with each other 
+benefit 
+its lang indenpendt
+secure 
+api - monolethic architecure
+
+micro service - multiple db and multiple server 
+web client used in integration for micro services
+
+1.rest - Representation state transfer
+no protocol follow
+low bandwidth - low internet speed
+compare to soap less secure
+data stored - json xml xhtml text
+mostly json
+
+2.soap-simple object access protocol
+protocol follow
+high bandwidth
+high secure
+xml
+payment login credential
+
+api method 1.get - data fetching
+post - data insert 
+put - all update
+patch - single update 
+delete - delete record 
+
+postman - to check api testing
+python - lib - single fun light weight never follow mvc pattern lib can be manage by developer
+framework 
+follow mvc pattern
+framwork manage developer
+
+private and protected variable
+protected means variable should not be accessed directly outside the class but it still can be inheritance 
+private used for data hiding/security 
+
+class Parent:
+    
+    def __init__(self):
+        self.name = "Rahi"
+    
+    def show(self):
+        print("Parent Class")
+
+
+class Child(Parent):
+    
+    def __init__(self):
+        super().__init__()
+        self.age = 20
+    
+    def display(self):
+        super().show()
+        print("Name :", self.name)
+        print("Age :", self.age)
+
+
+c = Child()
+
+c.display()
+
+super method used access 
+parent class constructor method properties
+without super() Parent constructor will not run automatically
+
+super diff instance
+super - parent access 
+call parent construcor/method 
+super()
+used in inheritance
+instance - variable belong to object
+store class object 
+self.
+used in class/object
+
+reference varible - object 
+
+instance is objec created from a class 

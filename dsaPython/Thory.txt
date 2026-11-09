@@ -1,0 +1,9 @@
+efficiency programming
+ex how you find efficiency of A.C 
+according to their power rating
+so in programm efficiency coun which algortihm has less time and space
+space and time paramter
+ex :- Google use Pagerank for giving ans in short sec of time
+ex :- for space optimize app use lite version asphalt lite
+kb to gb 1o^6
+space e MATTERS

@@ -1,0 +1,67 @@
+==>  Part A: Dictionary Basics
+
+1. Create a dictionary of 5 students with their marks. Print all keys and values separately.
+2. Write a program to check if a key exists in a dictionary.
+3. Update a value in the dictionary (e.g., change marks of one student).
+4. Remove a key from the dictionary using `pop()`.
+5. Merge two dictionaries into one.
+6. Count how many times each character appears in a string and store results in a dictionary.
+7. Create a dictionary with keys as numbers (1–5) and values as their squares.
+8. Write a program to find the maximum and minimum value in a dictionary.
+9. Write a program to invert keys and values of a dictionary.
+10. Sort a dictionary by its values (ascending & descending).
+
+---
+
+==>  Part B: Dictionary + Functions
+
+11. Write a function that takes a dictionary and returns the sum of all values.
+12. Write a function to return the key with the maximum value from a dictionary.
+13. Write a function that takes two dictionaries and merges them.
+14. Write a function that takes a dictionary and a key, and removes that key safely.
+15. Write a function that counts word frequency from a sentence using a dictionary.
+16. Write a function that takes a dictionary of students & marks, and returns students who scored above 50.
+17. Write a function that swaps keys and values in a dictionary.
+18. Write a function that checks if two dictionaries are equal.
+19. Write a function to multiply all values in a dictionary.
+20. Write a function that takes a nested dictionary and prints it in a readable format.
+
+---
+
+==>  Part C: Real-World Tasks
+
+21. ""Contact Book:"" Store names as keys and phone numbers as values. Add functions to: add, search, update, and delete contacts.
+22. ""Inventory System:"" Create a dictionary of products with quantities. Write functions to:
+
+* Add stock
+* Remove stock
+* Check availability
+
+23. ""Student Result System:"" Dictionary with student names as keys and marks as values. Write functions to:
+
+* Find topper
+* Calculate average marks
+* List students who failed (marks < 40)
+
+24. ""Voting System:"" Dictionary with candidates as keys and vote count as values. Write functions to:
+
+* Cast a vote
+* Show live results
+* Find the winner
+
+25. ""Library Management:"" Dictionary with book titles as keys and availability (`True/False`) as values. Functions to:
+
+* Borrow a book
+* Return a book
+* Show available books
+
+---
+
+==>  Part D: Advanced Challenges
+
+26. Write a function that takes a list of dictionaries (employees with salary) and returns the highest-paid employee.
+27. Write a function to merge multiple dictionaries into one (not just two).
+28. Write a function to group words by their first letter using a dictionary.
+29. Write a function to flatten a nested dictionary.
+30. Write a function that creates a dictionary mapping each unique word in a paragraph to its count (word frequency).
+

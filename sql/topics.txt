@@ -1,0 +1,75 @@
+sql query fast execution
+sql query archietecure 
+orm architecture 
+odm architecture
+why orm and odm 
+no sql vs mysql 
+innodb and myislam 
+dbms Rdbms Mongo
+table and db creation 
+select query 
+distinct
+where and having 
+order by 
+group by 
+and or not 
+null values 
+update delete
+select top
+aggregate functions
+like 
+wildcards
+in between 
+aliases
+joins
+inner union and union all
+left join
+right join
+full join
+self join 
+cross join
+Exists 
+any all 
+case 
+stored procedures 
+operators
+
+DB
+create db 
+drop db 
+backup db 
+alter table 
+Constraints
+Not null 
+Unique 
+Primary Key
+Foreign Key
+Candidate Key
+Composite Key
+check 
+Default 
+Auto increment
+Dates
+trigger
+window fuunction
+limit
+subquery
+
+Index
+View
+Cte
+diff view and cte
+
+SQL injections
+
+mongodb 
+
+
+sql connection with python 
+orm connection with python 
+
+Normalization
+Acid property
+Transactions
+
+how query execution done 

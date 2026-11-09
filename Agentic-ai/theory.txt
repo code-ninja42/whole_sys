@@ -1,0 +1,93 @@
+gen ai vs agentic ai 
+
+chatboat vs ai chat boat 
+normal chatboat :
+single task 
+sync - 
+no memor
+
+ai chat boat :- 
+multiple task 
+async -> thread based
+process fast 
+compare to sync less safe
+
+
+sync : 
+take time if used in agent 
+- at a time single process execute 
+always safe
+
+
+kafka :-
+first process msg pass to second process so on 
+e.g first process api pass it to second process which is llm 
+communication between process 
+
+MultiThreading :- 
+python built in sync at time of creating agent make function as async
+Thread - sequence of execution within a process
+1.main process -> multiple sub process in sequence 
+just call main process it will internaly execute sub process
+await -> not wait for process to end call other process
+async and await process Threading 
+
+with help of thread you create 1 single process called Threading
+with using thread create multiple process MultiThreading
+
+
+Life cycle of thread
+stage1:- 
+1.born phase / new phase :- 
+you make your process async (default was sync)
+2.runnable phase / ready :- 
+ready  
+your process is ready to perfom task 
+3.running phase :
+actual task execute
+4.wait / block 
+when agent running order task according to your prompt 
+now customer gives new prompt product 
+then order will go on wait phase
+if work is done block phase 
+5.destroy - destroy
+
+crew ai :- based on tool not node
+
+it will work on background we'll not see any working of things if any problem 
+we can check using Langsmith  
+
+prompt template and backstory different 
+prompt template :- is structure way our process 
+backstory :- how it should perform (like you are experience techai leader)
+
+Tradition - no planning, no reasoning,if changes then existing workflow stop n8n and Agent workflow 
+
+async = multiple process in crew ai and await = do not wait for first process to end
+
+python don't have multiple threading to make multi thread process we use -> async and await 
+
+Rag is not framework it is system that make pipeline work while langchain,graph,crew ai are framework 
+different framwork can never integrate together that's why rag integrate with other framwork 
+
+
+
+1-autonomous agent
+it is type of agent where human involment is 0
+
+2 re-act = reasoning + action 
+agent do reasoning and action   
+
+3 human - in -loop -> HIL
+human between agents
+
+
+stripe 
+secret key - agent integrate
+Published key - react 
+
+stripe debit card 
+
+verbose = True =let use know agent works flow 
+
+

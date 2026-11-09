@@ -1,0 +1,12 @@
+why pandas ?
+pandas to sql
+
+loc and iloc
+
+how to fill missing values (mean or median)
+
+outliers detection methods
+
+quantile and percentile 
+
+apply() and applymap()

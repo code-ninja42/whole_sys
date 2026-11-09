@@ -1,0 +1,25 @@
+python 
+
+iterator 
+generator 
+function types  HOF function 
+file handling 
+thread 
+asyn 
+deployment
+HOF function 
+
+sql 
+cte 
+window 
+join 
+sub query
+
+Ml 
+k-means 
+hierarchical 
+gmm 
+joblib/pickle
+smote / class weightage 
+bias-variance trade off
+

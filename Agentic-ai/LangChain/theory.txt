@@ -1,0 +1,141 @@
+chain -> manually workflow done by developer
+agent -> done by llm
+
+parser -> api connect with llm 
+previous output form llm 
+now user prompt convert into json(api will not understand 
+normal text) that's why we use parser -> normal text to json
+format
+
+runnable -> 
+langchain work on both thing chain and runnable 
+now in advance architecture used runnable in langchain
+user input (runnable decide what to do (agent through) and output according
+to que)
+
+runnable lambda:-
+python function used at agentic 
+
+runnable pass through:-
+just pass it to output (no addition work on input pass it through output)
+runnable sequence:
+workflow decide (which process should first execute)
+
+runnable parallel:
+multiple process work at same time 
+
+
+how would agent decide multiple api which to fetch ??
+depends of weightage 
+
+
+conversation memory :
+AI store our information / chat called conversation memory
+three ways 
+1.local 
+list inside our program 
+forgot chat
+2.reddis
+temporary chat store ex:- otp session id 
+third party tool 
+store as key and value 
+3.database
+permenant chat store 
+
+Humanmessage :-
+prompt message 
+
+AI message:-
+according to prompt llm will return answer called AI message
+
+Call Back fun possible when python create method as -> High order func 
+call back -> method parameter pass another method as parameter
+
+prompt template :- llm answer style we generate
+
+Redis - remote dict server 
+store temp data 
+Redis uses RAM 
+Two method 
+    1.set and 2.get 
+use Hash algorithm to store data 
+adv of using Hash single key = multiple value 
+need docker to set redis or redis server 
+
+
+================================================
+langchain is based on chain one chain output is input for another chain 
+
+langchain Components:-
+1.Model
+interface with the help of model can communicate with any AI  
+with api key and model name 
+ex.gemini-2.5-flash or gpt-4
+
+2.Prompts
+input we send into llm 
+ex.what is programming?
+using PromptTemplate we can give style 
+PromptTemplate generate reproducible,structured and dynamic prompt for 
+LLMs (called rollbase prompt)
+few shot programming :- 
+where we give a model a small number of solved ex of answer inside the prompt
+ex. if money withdraw 
+input -> money output->banking problem 
+
+3.Chains
+pipeline for langchain automatic no need to manual 
+
+4.memory
+LLMs API calls are stateless 
+when we send request to llm 
+every request is individual 
+it doesnot have privous memory knowledge
+
+1.ConverstaionBufferMemory:- 
+stores  whole chat history 
+problem :- if chat large then 
+2.ConverstaionBufferWindowMemory:-
+only keeps the last N interaction to avoid extensive token usage
+3.Summeraties-Based memory:-
+summary of chat history api call 
+text save 
+4.custome memory :- 
+for advanced use case store specialized state (e.g. user's preferences)
+
+5.Indexes
+Indexes connect your application to external knowledge such as PDfs,website or dbs
+company private data added to pdf then embedding and via Indexes connect 
+
+6.Agents 
+instead of chatbot ai agent 
+like if chatbot :- travel website 
+if api :- can you book the flight of cheapest day of march to indigo 
+
+Ai agents have access to tools 
+
+make def fun into @tool so langchain make function as a tool 
+then createagent after that langchain make fun as Tool  
+createagent 3 parameter (llm,tool,system prompt)
+
+
+
+mcp 
+mcp server :- external tool access 
+mcp clinet :- response 
+
+fastapi used to create api just like that 
+fastmcp to create server
+
+llm.invoke  method is sync 
+so for mcp server use ainvoke 
+
+
+(mcp set up) multiservermcpclinet :- pass three argument
+transport:stdio (input and output)
+command:- which programming lan 
+args :- mcp_server.py (file )
+
+await -> async do not need to wait if process 1 running process 2 can run at same time 
+
+get_tools() -> return tools from mcp_server.py file in list from 

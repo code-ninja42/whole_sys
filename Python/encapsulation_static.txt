@@ -1,0 +1,4 @@
+reference variable 
+reference variables hold the objects 
+
+Encapsulation 

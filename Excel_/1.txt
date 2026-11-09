@@ -1,0 +1,31 @@
+workbook and worksheet/spreadsheet
+ex book is workbook and pages worksheet
+so whole file is workbook 
+Tabs
+Ribbons
+group
+menus :- further details in group
+quick access 
+cells - row and columns intersection  
+row - 1 2 3
+col - A B C
+cell naming - CR
+auto adjusting - double click on Column
+
+update
+1.formula bar 
+click cell edit then change in formula bar 
+2.fn + f2
+3.best one double click cell
+
+default
+text - bottom left
+number - bottom right
+
+wrap text can enter next line text in one cell
+
+1.merging
+merge & center use
+but it will break format layout of excel 
+intead of this use
+Alignment partially merge

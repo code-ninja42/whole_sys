@@ -1,0 +1,5 @@
+how to measure time
+techniques
+Measuring time to execute
+Counting operations involved
+Abstract notion of order of growth

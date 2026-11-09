@@ -1,0 +1,141 @@
+focus on input respect to loop iteration
+Problem 4:-
+def intToStr(i):
+    digit = "123456789"
+    if i == 0:
+        return '0'
+    result = ""
+    while i > 0:
+        result = digit[i%10] + result
+        i = i // 10
+    return result
+intToStr(123)
+how it works 
+first num is not == 0
+so 123 % 10 so 3 
+then 12 % 10 so 2 
+so first "1" and so on
+input = 123 1230 12300
+Time     3    4    5 module
+input 10x incr time 1 incr
+it's a log n 
+(divide case if num getting smaller)
+=====
+Problem 5:
+n = 1000
+int i, k  = 0
+for (i=n/2;i<=n;i++){
+    for(j = 2;j<=n;j=j*2){
+        k = k+n/2
+    }
+}
+outer loop = 500
+iner loop = 
+if input 10 
+outer = 5 
+inner 2 4 8
+
+if n 100
+outer = 50
+inner = 2 4 8 16 32 64 (64 x 64 will be greater than 100)
+
+if n = 1000
+outer = 500
+inner = 2 4 8 16 32 64 128  256 512 
+
+input -> 10  100 1000
+time -> 248  248163264 248163264128256512
+         3     6       9
+
+10
+input multiple
+output add
+so log airthmic
+
+outer = n/2
+inner = lonn
+o(n/2 x logn)
+o(1/2 x nlogn)
+O(nlogn)
+====
+Problem 7
+binary search -> log n
+searching divide with factor
+====
+Problem 8
+L = [1,2,3,4,5]
+for i in range(0,len(L)):
+    for j in range(i+1,len(L)):
+        print('({},{}').format(l(i),L(j))
+
+outer = n times 
+inner = n - 1
+o(n x n-1)
+o(n^2-n)
+o(n^2) remove small -n
+
+==========
+Problem 9
+a = [1,2,3,4]
+b = [2,3,4,5,6]
+for i in a:
+    for j in b:
+        if i < j:
+        print('({},{})'.format(i,j))
+
+o(n^2) = when loop iteration same for outer inner
+o(ab) best cozz not same iteration 
+but it's o(n^2) but if option given o(ab)
+====
+Problem 10
+for i in a:
+    for j in b:
+        for k in range(10000):
+            print
+k remove 1000
+o(n^2)
+=====
+Problem 11
+L = [1,2,3,4,5]
+# 5 4 3 2 1
+for i in range(0,len(L)//2):
+    other = len(L) - i - 1
+    temp = L[i]
+    L[i] = L[other]
+    L[other] = temp
+print(L)
+o(n/2)
+o(n)
+
+
+Recursion ====== Loops focus on iteration Recursion-> function call that is Thinking process
+def factorial(n):
+    if n == 1:
+        return 1 
+    else:
+        return n*factorial(n-1)
+print(factorial(5))
+
+5 -> 4 -> 3 -> 2 -> 1
+input = 5 10 100 200
+time = 5 10 100 200 linear
+o(n)
+======
+
+def fib(n):
+    if n == 1 or n == 0:
+        return 1 
+    else:
+        return fib(n-1) + fib(n-2)
+
+input 1  2  3  5
+time  1  2  4  14{
+    1<- 3 -> 2 -> 1 -> 0 
+    5->4->3->2->1
+    4->3->2->1-
+
+}
+exponential 
+less than > 2 ki power n o(2^n)
+======
+ 

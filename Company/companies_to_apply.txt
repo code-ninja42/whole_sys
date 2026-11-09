@@ -1,0 +1,37 @@
+Data Analyst
+JYOT HR SOLUTION
+Requirements:-
+data gather & cleaning
+analysis
+ms excel powerbi Tableau
+sql
+process optimization
+
+2)Hdata systems
+data visualization
+3)sutra analysis limited
+
+4)infusion analysts a software development
+1.programming & software engineering
+python experience with java or scala
+2.framework & lib
+TensorFlow,PyTorch,scikit-learn pandas
+Sql
+3.GenAi & APIs: openAI GPT API or Hugging Face,NLP application
+4.Prompt & Fine-tuning - LLM
+4.Deployment & MLOps-
+Docker,fastapi,flask,streamlit
+5.Math & Statistic :-
+a solid understanding of Linear Algebra, Calculus, Probability to validate ML results and tune model hyperparameters
+
+5) Innovatics - Data, AI and Decision Intelligence Company
+AI / ML
+Foundations :python
+ML & DL : pytorch , Tensorflow,opencv
+computer vision: CNN and Vision Transformers
+Model Deployment : Docker, Kubernetes, RESTful API(fastapi
+
+6)InfoLabz
+ml,ai,powerBi,python
+7)GrowExx :- RAG, LLM, APIs, A/B testing and ML ,model, data taxonomies Python(including Scikit-Learn, Jupyternotebooks
+), Data mining & Statistical analysis, cloud platform(AWS), strong logical reasoning

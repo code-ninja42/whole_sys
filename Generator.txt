@@ -1,0 +1,44 @@
+Generator 
+
+List will store all data at same time 
+
+Generator 
+a generator does not store all the values in memory at once. it creates one value at a time
+yield keyword 
+
+Iterator 
+
+an iterator is an object from which we get values one by one 
+
+
+
+@staticmethod 
+single time memory allocation 
+without static method normal class occupied memory 
+without static we need to create object and when we create object it occupied memory
+
+if your @staticmethod is 1mb and you call it multiple time still it will only occupied 1mb memory
+WHEN YOU DECLARE CLASS CLASS WILL NEVER OCCUPIED MEMORY
+
+staticmethod cannot access any other method of class 
+static can only access it's method
+work as localscoop
+
+if it is classmethod then using classmethod can access method
+works as global scoop
+
+@staticmethod - keyword cozz it don't required any object  and @classmethod instead of self give cls keyword
+
+
+GIL - Global Interpreter Lock
+problem in multithreading 
+Race condition:- same resource multiple thread try to access
+dead lock:- both process stuck none of them working
+To solve this we use GIL 
+even if you create multithreading process but still at a time it execute single thread
+so at each process GIL will execute one process
+Born 
+Runnable
+Runnig
+Waiting/terminate
+Destory

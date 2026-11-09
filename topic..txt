@@ -1,0 +1,215 @@
+matrix 
+Eigenvalues and Eigenvectors
+central limit theorm
+Bayes Theorem
+Probabilty Distributiin 
+Hypothesis Testing :- p-value,z, t ,chi-square 
+sample and population
+chain rule
+skewness and kurtosis
+
+correlation:- pearson 
+
+normal and uniform distribution
+
+gradient
+
+Descriptive Statistice
+
+
+1. Fundamentals of Statistics
+
+What is statistics?
+
+Population vs. sample
+
+Parameter vs. statistic
+
+Descriptive vs. inferential statistics
+
+Types of data:
+
+Qualitative (categorical)
+
+Quantitative (numerical)
+
+Discrete vs. continuous
+
+Levels of measurement:
+
+Nominal
+
+Ordinal
+
+Interval
+
+Ratio
+
+Sampling methods:
+
+Simple random sampling
+
+Stratified sampling
+
+Cluster sampling
+
+Systematic sampling
+
+Sampling bias and non-response bias
+
+2. Descriptive Statistics
+
+Measures of central tendency:
+
+Mean
+
+Median
+
+Mode
+
+Measures of dispersion:
+
+Range
+
+Variance
+
+Standard deviation
+
+Interquartile range (IQR)
+
+Coefficient of variation
+
+Percentiles and quartiles
+
+Five-number summary
+
+Skewness:
+
+Positive skew
+
+Negative skew
+
+Symmetric distribution
+
+Kurtosis
+
+Outliers and their detection
+
+Covariance
+
+Correlation:
+
+Pearson correlation
+
+Spearman rank correlation
+
+Kendall's tau
+
+3. Probability
+
+Basic probability concepts
+
+Probability rules:
+
+Addition rule
+
+Multiplication rule
+
+Complement rule
+
+Conditional probability
+
+Independent and dependent events
+
+Mutually exclusive events
+
+Bayes' theorem
+
+Law of total probability
+
+Permutations and combinations
+
+Random variables:
+
+Discrete
+
+Continuous
+
+Expected value and variance of a random variable
+
+4. Probability Distributions
+
+What is a probability distribution?
+
+Probability mass function (PMF)
+
+Probability density function (PDF)
+
+Cumulative distribution function (CDF)
+
+Discrete distributions:
+
+Bernoulli distribution
+
+Binomial distribution
+
+Poisson distribution
+
+Geometric distribution
+
+Continuous distributions:
+
+Uniform distribution
+
+Normal (Gaussian) distribution
+
+Exponential distribution
+
+Student's t-distribution
+
+Chi-square distribution
+
+F-distribution
+
+Standard normal distribution and Z-scores
+
+Empirical rule (68–95–99.7)
+
+Central Limit Theorem (CLT)
+
+5. Inferential Statistics
+
+
+Covariance vs. correlation
+
+Correlation vs. causation
+
+
+A/B testing
+
+
+
+Feature scaling
+1 standardization
+2 normalization 
+
+outlier detection
+1.z-score
+2.IQR method 
+
+ANOVA F-test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

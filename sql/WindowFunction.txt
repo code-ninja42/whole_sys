@@ -1,0 +1,195 @@
+Window functions in sql is a analytical  functionality same as group by
+return row by row result 
+wherelse group by return groups 
+e.g.
+name  branch  marks
+abc    eee     10
+xyz    cse     30 
+abc1    eee     20 
+xyz1    cse      40 
+
+select branch,avg(marks) as avg_marks
+from marks 
+group by branch
+
+returns 
+branch   avg avg_marks
+eee     15 
+cse     35
+
+select * 
+avg(marks) over(partition by branch)
+from marks 
+
+returns 
+
+name branch avg_marks 
+abc    eee    15
+xyz    cse     35 
+abc1    eee     15 
+xyz1    cse      35 
+
+e.g Find 
+Table :- marks inside Window_Function
+select avg(marks) from marks;
+will return 75.2500 single row 
+select *,avg(marks) over() from marks 
+will return 75.2500 for each row 
+
+que :- find avg marks for each branch using partition 
+que :- Find all the students who have marks higher than the avg marks of their respective branch
+select * from(
+select *, 
+avg(marks) over(partition by branch) as 
+'branch_avg'
+from marks) t 
+where t.marks > t.branch_avg;
+
+=============================================================================================
+RANK / DENSE_RANK / ROW_NUMBER 
+
+RANK :- 
+select *,
+RANK() OVER(ORDER BY marks DESC)
+from marks;
+
+see if dataset like
+cse 98
+eee 95
+eee 95
+cse 95
+eee 91
+
+how it will rank 98 to - 1 
+95 to - 2
+91 to - 3  (it will not work like this)
+
+instead 
+if 98 - 1
+95 -2
+95 - 2
+95 - 2
+91 - 5
+
+
+
+
+select *,
+RANK() OVER(PARTITION BY branch ORDER BY marks DESC)
+from marks;
+
+DENSE_RANK :- 
+how rank functionality works
+95 -1
+95  -1
+89 -3 
+how DENSE_RANK functionality works
+95 - 1
+95 - 1
+89 - 2
+
+select *,
+DENSE_RANK() OVER(PARTITION BY branch ORDER BY marks desc)
+from marks;
+
+rank and DENSE_RANK how to us 
+
+ROW_NUMBER :- 
+row_number functionality
+95 - 1
+95 - 2
+89 - 3
+
+select *,
+row_number() over()
+from marks;
+
+select *,
+row_number() over(partition by branch)
+from marks;
+if num of branch 4 then row rank will be 1 2 3 4
+suppose ex
+cse  - 1
+cse  - 2
+cse  - 3
+cse  - 4
+eee  - 1
+eee  - 2 
+eee  - 3
+eee  - 4
+eee  - 1
+
+when to use :-  with branch join number to generate roll number
+
+=================================================================
+FIRST_VALUE/LAST_VALUE/NTH_VALUE
+1.SELECT *,
+first_value(name) over(order by marks desc)
+from marks;
+
+same for LAST_VALUE will not work :
+frame :- is subset of group that derermines the scope of the 
+window function calculation 
+
+unbounded preceding = 1st row 
+LAST_VALUE work on frame row unbounded preceding nd current row 
+
+how we'll use rows between unbounded preceding and unbounded following
+
+so instead of writing this 
+SELECT *,
+last_value(name) over(order by marks desc)
+from marks;
+we will write 
+
+select *,
+last_value(marks) over(order by marks desc 
+ROWS between unbounded preceding and unbounded following)
+from marks;
+
+NTH_VALUE:-
+e.g if you want second topper 
+select *,
+NTH_VALUE(marks,2) over(partition by 
+branch order by marks desc 
+rows between unbounded preceding and unbounded following)
+from marks;
+==============================================
+Que 
+1.Find the branch toppers with name branch name and marks 
+SELECT name,branch,marks from (SELECT *,
+FIRST_value(name) over(PARTITION by branch order by marks desc) AS 'topper_name',
+FIRST_value(marks) over(PARTITION by branch order by marks desc) AS 'topper_marks'
+from marks) t
+where t.name = t.topper_name AND t.marks = t.topper_marks
+
+or we can do like this 
+SELECT name,branch,marks from (SELECT *,
+FIRST_value(name) over(PARTITION by branch order by marks desc) AS 'topper_name',
+FIRST_value(marks) over(PARTITION by branch order by marks desc) AS 'topper_marks'
+from marks) t
+group by t.topper_name,t.topper_marks
+order by t.topper_marks desc;
+===========================================================================================
+LEAD and LAG 
+LAG working 
+col  it will do 
+29    NULL
+39   29
+45    39 
+       
+LEAD working
+col  it will do 
+29         39
+39         45
+45         NULL
+============================================================================================
+Find the MoM reveneu growth of zomoto
+month on month 
+use zomotodb 
+select monthname(date),sum(account),
+lag(sum(amount)) over(order by month(date))
+from orders
+group by monthname(date)
+order by month(date) asc 
+

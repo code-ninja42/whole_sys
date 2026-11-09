@@ -1,0 +1,19 @@
+Space Complexity 
+memory space that your program takes
+depend on machine diff machine diff space
+we'use big o notation 
+
+auxiliary space + input space
+auxiliary -> the space that you take to solve the Problem
+input space -> the space that you take to store the pinput
+
+a b 
+c = a + b -> input space
+where c is auxiliary space extra variable
+
+int a[n]; -> o(n)
+----- some point to highlighter----
+although less space but  never do any thing to input
+a b 
+b = a+b
+

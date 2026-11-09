@@ -1,0 +1,258 @@
+ NLP Pipeline
+user prompt - cleaning - tokenization - stop word removal - lammitization/steaming -feature extraction -model/network//rnn
+first convert sentence to lower upper case 
+
+Rnn sentence:-
+memory have 
+memory two part devide 
+1.ht    2.ht-1
+old memory  new memory
+
+xt = t -input timestamp
+ht = hidden stamp
+ht - 1 = memory
+i love cricket
+first time old memory blank
+input x:- i tokenization
+embedding i is text so text to number 
+tanh :- (Wx*x1 + Wh*h1+b)
+w = weight (input)
+wh = weight of hidden state memory
+h1 = past memory (when we implement I past memory of i = 0) 
+Wh = weight of hidden memory random
+bias value = 1 (random model)
+using this formula tanhnh= (Wx*x1 + Wh*h1+b)suppose we get = 0.94 it is new memory of I 
+
+now if new word love (ht will be 0.94)
+
+to convert value into -1 to 1 :- (e^x - e^-x)/(e^x + e^-x) 
+memory [blank] 
+second :- love 
+memory [i] old memory
+third :- cricket
+memory[i,love]
+
+activation function :- tanh (sigmoid 0 to 1) tanh -1 to 1
+
+embedding text to vector
+rnn first 
+step 1 :- tokenization
+step 2:- next process embedding
+rnn generate 2 vector for single word  
+
+
+transformer:-
+lstm rnn all do tokenization means paragraphd devide into single word
+so to avoid this we use transformer
+transformer don't have memory
+it use self attensation 
+transformer don't use tokenization works in whole paragraph no need break into words
+cannot use for RAG  
+
+LSTM :- long short term memory 
+problem in rnn forgot old memmory 
+lstm has three gates two state
+input gate
+output gate 
+forgot gate 
+works in RAG
+
+two state 
+cell state = it's the memory of lstm
+rnn whole paragraph all data store inside cell state - internal memory
+forgot gate - when lstm remove word 
+hidden state 
+input gate :- pass sentence to the cell state 
+output gate :- it predict the next word 
+hidden state :- every word have it's own hidden memmory
+
+GRU :- Gates Recurrent Unit 
+gru is the updated version of lstm 
+same accuracy in gru and lstm 
+difference is that 
+1.lstm process is slow 
+2.lstm have 3 gates 
+GRU use only 2 gates 
+3.time complexity high in lstm cozz it has 3 gates
+works in RAG 
+Ngram in GRU 
+
+1.unigram  - works on single word N-1+1
+2.bigram - works on two combine word N-
+3.trigram
+4.four gram  - four words
+
+Bag of words nlp works 
+algorithm will not consider duplicate word ex machine learning ai 
+[1 1 1]
+if new words enter machine learning ai machine 
+instead of [1 1 1 1]
+it will do [2 1 1]
+problem of using Bag of words 
+1.cannot find the word position 
+2.not work s with Ngram 
+[machine,learning,part,ai] -> it will not add last machine 
+so in short Bag of words gives occurance of particular word 
+
+solution for above problem 
+instead of using Bag of words use one hot encoding 
+NLP dont have label 
+how works using one hot encoding
+machine learning part ai machine
+[1 0 0 0 ],[0 1 0 0 0],[0 0 1 0 0],[0 0 0 1 0],[0 0 0 0 1]
+
+bag of word return list of all sentence 
+one hot encoding return list of single word 
+
+problem in one hot 
+e.g you if 10k words in paragraph 
+then one hot store single word in list and
+in list size will be 10k only 1 element present plus 10k list also 
+so problem memory wastage , slow ,
+
+memory wastage called sparcial vector (
+slinding window :- Ngrams 
+
+To solve one hot encoding problem  - web2vec 
+
+web2vec:- 
+instead of 1 and 0 
+and give weight to word 
+machine learning ai 
+[ 0.87,weight of learning,weight of ai]
+now if ai then it will check correlation with other word 
+advt of using web2vec
+1.memmory wastage issue solve
+2.correlate words so if ai then on sugg machine learning
+
+after completing all this process GRU algorithm starts now 
+first all nlp Pipeline
+
+
+authentication 
+authorization 
+langsmith
+MCP 
+
+Authentication - valid user 
+
+Authorization - role based access 
+1.session base email and password otp  (gmail link for otp called - magic link)
+2.Bearer token based authentication 
+after entering email and password at server side token will be generated 
+we verify token then login 
+client side and server side token verify 
+3.JWT (json web token) - most of used this 
+same exact thing like Bearer token 
+difference between Bearer and jwt is that Bearer will skip 7 letter starting of token (not exact 7 can manually do mostly 7)
+JWT compare whole token 
+4.multi factor authentication 
+gmail and  phone 
+5.oauth 2.0 (open authentication) -login with gmail , skype 
+this is paid service above all free 
+
+
+Langsmith :- agent
+
+in traditional programming if error occur 
+we do this
+1.exception handling
+2.debugging
+3.log generate at server side 
+automation with selenium/playwrite
+
+so same thing Langsmith will do for langchain,langgraph,crew ai 
+Langsmith debug monitor chain,graph,crew 
+debug solve and start the workflow again 
+Langsmith 
+1.monitor agent
+2.token usage manage 
+3.costing 
+
+
+MCP  - model context protocol 
+problem in AI was third party integration 
+ai cannot integrate with other third party app like gmail or codex
+so it give agent access inside code (with agent code integrate)
+
+now
+agent --- MCP -- third party
+
+MCP integrate with MCP Server
+like we create MCP Server for gmail github cloud
+
+now example AI agent claude (it's the mcp client) -- now to access claude to gmail 
+we give rules and regulation into mcp protocol 
+mcp protocol 
+1.request 
+2.response mention in protocol
+
+now claude (mcp client) -- communicate with mcp ------ connect with mcp server (like gmail facebook github)
+
+
+
+0 and 1 
+
+
+add Rate limit,caching,ngix in next deployment 
+
+Cost Optimization 
+
+when building all this process default cpu only 1 process 
+
+WordEmbedding 
+
+word2vec cbow, skip gram - limitation non dictionary word not und
+fasttext  - understand invalid spelling
+
+
+AutoEncoder :- 
+large scale data conert into small scale
+user input 
+encoder 
+convert user input image into compressed pixel and that compressed size store in vector 
+this called latent vector 
+
+decoder
+decoder work on latent vector and generate image 
+
+encoder and decoder space call latent space 
+
+at initial stage when vectors are not generated then encoder and decoder space called latent space 
+
+Limitation :- 
+unlike gpt AutoEncoder not works on prompt need image as input 
+AutoEncoder adv:-
+1.image compressed
+2.it will understand image missing part and ouput compressed image will be fully 
+
+
+latent vector z = f(x)
+
+AutoEncoder workflow :- 
+input -> encoder (initial latent space) -> latent vector -> decoder -> output 
+
+loss using MSE 
+
+when loss function value 0.56 then we change weight how we know we need to incr or dcrse the weight  ??
+
+at first epoch when loss value 70% more incr weight 
+otherwise decrs weight 
+
+AutoEncoder alternative VAE :
+
+VAE - varional auto encoder 
+
+unlike AutoEncoder VAE ouput is not fixed (merge all input image and return image)
+
+VAE used in :- crime at criminal identify 
+ 
+part of genai 
+
+computer vision 
+nlp 
+transformer
+gen ai 
+llm  
+need to check by my side 
+

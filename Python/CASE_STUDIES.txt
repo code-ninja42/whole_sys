@@ -1,0 +1,34 @@
+1) 
+sales_data = [
+    {"product": "Apple", "quantity": 10, "price": 0.5},
+    {"product": "Banana", "quantity": 5, "price": 0.3},
+    {"product": "Orange", "quantity": 8, "price": 0.6},
+    {"product": "Apple", "quantity": 7, "price": 0.5},
+    {"product": "Banana", "quantity": 3, "price": 0.3},
+    {"product": "Orange", "quantity": 6, "price": 0.6},
+]
+
+Tasks to Complete:
+-----------------------------
+Total Sales per Product
+Total Quantity Sold per Product:
+Identify the most Popular Product.
+Find the product that generated the most revenue.
+====================================================================
+2) Task : Social Media Interaction Analysis
+
+Analyze social media posts and interactions to find top influencers and engagement trends.
+
+
+posts = [
+    {"user": "alice", "likes": 120, "comments": 12, "shares": 8, "topic": "tech"},
+    {"user": "bob", "likes": 200, "comments": 22, "shares": 14, "topic": "travel"},
+    {"user": "alice", "likes": 90, "comments": 10, "shares": 5, "topic": "tech"},
+    {"user": "diana", "likes": 300, "comments": 40, "shares": 25, "topic": "health"},
+    {"user": "bob", "likes": 100, "comments": 12, "shares": 7, "topic": "travel"},
+]
+
+Calculate total engagement per user (likes + comments + shares).
+Identify the top influencer (highest average engagement per post).
+Calculate topic-wise engagement.
+Find the most engaging topic.
